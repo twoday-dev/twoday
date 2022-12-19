@@ -4,7 +4,7 @@ import { Plugin } from 'vite';
 // gives different references when importing clientPromise.
 
 const optimizeOpenAPIPatchPlugin: Plugin = {
-  name: '@visma/vite-plugin-super-template-optimize-openapi-patch',
+  name: '@twoday/vite-plugin-super-template-optimize-openapi-patch',
   config: (_config) => ({
     optimizeDeps: {
       exclude: ['@/api'],

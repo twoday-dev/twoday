@@ -1,16 +1,16 @@
 {
-  "name": "@visma/remix-ssg",
+  "name": "@twoday/remix-ssg",
   "version": "0.1.0",
   "description": "Generate static site from Remix app.",
-  "homepage": "https://github.com/Visma-AS/visma/tree/main/packages/remix-ssg",
+  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/remix-ssg",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Visma-AS/visma.git"
+    "url": "https://github.com/twoday-dev/twoday.git"
   },
   "license": "ISC",
   "author": {
     "name": "Arno Saine",
-    "email": "arno.saine@visma.com"
+    "email": "arno.saine@twoday.com"
   },
   "type": "module",
   "bin": "./main.js",

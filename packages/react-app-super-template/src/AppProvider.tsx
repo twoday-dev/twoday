@@ -1,7 +1,7 @@
 import { clientPromise } from '@/api';
 import definition from '@/api/schema.json';
-import { IntlProvider } from '@visma/react-intl-bundled-messages';
-import { ReactKeycloakProvider } from '@visma/react-keycloak';
+import { IntlProvider } from '@twoday/react-intl-bundled-messages';
+import { ReactKeycloakProvider } from '@twoday/react-keycloak';
 import type Keycloak from 'keycloak-js';
 import type { OpenAPIV3 } from 'openapi-types';
 import React, { Suspense } from 'react';

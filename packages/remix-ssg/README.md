@@ -1,4 +1,4 @@
-# @visma/remix-ssg
+# @twoday/remix-ssg
 
 Generate static site from Remix app.
 

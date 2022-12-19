@@ -1,16 +1,16 @@
 {
-  "name": "@visma/react-app-super-template",
+  "name": "@twoday/react-app-super-template",
   "version": "1.4.1",
   "description": "`AppProvider` for super-template.",
-  "homepage": "https://github.com/Visma-AS/visma/tree/main/packages/react-app-super-template",
+  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/react-app-super-template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Visma-AS/visma.git"
+    "url": "https://github.com/twoday-dev/twoday.git"
   },
   "license": "ISC",
   "author": {
     "name": "Arno Saine",
-    "email": "arno.saine@visma.com"
+    "email": "arno.saine@twoday.com"
   },
   "type": "module",
   "exports": {
@@ -30,11 +30,11 @@
   },
   "dependencies": {
     "@postinumero/use-async": "^0.3.2",
-    "@visma/formatjs-scripts": "^1.0.0",
-    "@visma/msw-openapi-backend-integration": "^1.0.0",
-    "@visma/react-intl-bundled-messages": "^1.0.0",
-    "@visma/react-keycloak": "^1.1.0",
-    "@visma/react-openapi-client-generator": "^1.0.0",
+    "@twoday/formatjs-scripts": "^1.0.0",
+    "@twoday/msw-openapi-backend-integration": "^1.0.0",
+    "@twoday/react-intl-bundled-messages": "^1.0.0",
+    "@twoday/react-keycloak": "^1.1.0",
+    "@twoday/react-openapi-client-generator": "^1.0.0",
     "react-intl": "^5.20.10 || ^6.0.0"
   },
   "devDependencies": {
@@ -46,7 +46,7 @@
     "typescript": "^4.4.3"
   },
   "peerDependencies": {
-    "@visma/public.config": "^1.0.0"
+    "@twoday/public.config": "^1.0.0"
   },
   "publishConfig": {
     "access": "public",

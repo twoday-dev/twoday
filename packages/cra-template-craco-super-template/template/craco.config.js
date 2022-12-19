@@ -1,5 +1,5 @@
 module.exports = async ({ env }) => {
   return {
-    plugins: [(await import('@visma/craco-plugin-super-template')).default],
+    plugins: [(await import('@twoday/craco-plugin-super-template')).default],
   };
 };

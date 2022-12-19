@@ -1,16 +1,16 @@
 {
-  "name": "@visma/react-intl-bundled-messages",
+  "name": "@twoday/react-intl-bundled-messages",
   "version": "1.3.1",
   "description": "`IntlProvider` that lazy loads messages in current language in Webpack environment.",
-  "homepage": "https://github.com/Visma-AS/visma/tree/main/packages/react-intl-bundled-messages",
+  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/react-intl-bundled-messages",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Visma-AS/visma.git"
+    "url": "https://github.com/twoday-dev/twoday.git"
   },
   "license": "ISC",
   "author": {
     "name": "Arno Saine",
-    "email": "arno.saine@visma.com"
+    "email": "arno.saine@twoday.com"
   },
   "type": "module",
   "exports": {
@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@postinumero/use-async": "^0.3.2",
-    "@visma/react-app-locale-utils": "^1.0.0",
+    "@twoday/react-app-locale-utils": "^1.0.0",
     "react-intl": "^5.20.10 || ^6.0.0"
   },
   "devDependencies": {
@@ -39,7 +39,8 @@
     "@types/react-dom": "^17.0.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.3",
+    "vite": "^4.0.2"
   },
   "publishConfig": {
     "access": "public",

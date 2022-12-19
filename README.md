@@ -1,6 +1,6 @@
-# Visma
+# twoday
 
-Tools, snippets, helpers and other utility packages by Frontend discipline and contributors.
+Tools, snippets, helpers and other utility packages.
 
 Contributions are welcome!
 
@@ -10,38 +10,35 @@ Contributions are welcome!
 
 ### Plugins & Presets
 
-- [@visma/babel-preset-formatjs](/packages/babel-preset-formatjs) – [babel-plugin-formatjs](https://formatjs.io/docs/tooling/babel-plugin/) with `removeDefaultMessage` set `true` in production
-- [@visma/craco-plugin-super-template](/packages/craco-plugin-super-template) – [CRACO](https://github.com/gsoft-inc/craco) plugin for [@visma/cra-template-craco-super-template](/packages/cra-template-craco-super-template)
-- [@visma/vite-plugin-super-template](/packages/vite-plugin-super-template) – [Vite](https://vitejs.dev/) plugin for super-template
+- [@twoday/babel-preset-formatjs](/packages/babel-preset-formatjs) – [babel-plugin-formatjs](https://formatjs.io/docs/tooling/babel-plugin/) with `removeDefaultMessage` set `true` in production
+- [@twoday/craco-plugin-super-template](/packages/craco-plugin-super-template) – [CRACO](https://github.com/gsoft-inc/craco) plugin for [@twoday/cra-template-craco-super-template](/packages/cra-template-craco-super-template)
+- [@twoday/vite-plugin-super-template](/packages/vite-plugin-super-template) – [Vite](https://vitejs.dev/) plugin for super-template
 
 ### Templates
 
-- [@visma/cra-template-craco-super-template](/packages/cra-template-craco-super-template) – [Create React App](https://create-react-app.dev/) template with multiple preinstalled libraries and predefined configurations
+- [@twoday/cra-template-craco-super-template](/packages/cra-template-craco-super-template) – [Create React App](https://create-react-app.dev/) template with multiple preinstalled libraries and predefined configurations
 
 ### Tools
 
-- ~[@visma/build-npm-workspace](/packages/build-npm-workspace) – Build npm workspace packages in the correct order of internal dependency graph~ (deprecated)
-- [@visma/christmas-elf-name-generator](/packages/christmas-elf-name-generator) – With this high-level neural network -assisted [Christmas Elf Name Generator](https://visma-as.github.io/visma/christmas-elf-name-generator/), you can now generate your own custom elf name just in time for Christmas!
-- [@visma/formatjs-scripts](/packages/formatjs-scripts) – Extract and compile messages, scan `node_modules` for messages
-- [@visma/generator-visma](/packages/generator-visma) – [Yeoman](https://yeoman.io) npm package generator for this repository
-- [@visma/react-openapi-client-generator](/packages/react-openapi-client-generator) – Generate typed hooks and methods for React app from OpenAPI schema
-- [@visma/remix-ssg](/packages/remix-ssg) – Generate static site from Remix app
+- [@twoday/christmas-elf-name-generator](/packages/christmas-elf-name-generator) – With this high-level neural network -assisted [Christmas Elf Name Generator](https://twoday-as.github.io/twoday/christmas-elf-name-generator/), you can now generate your own custom elf name just in time for Christmas!
+- [@twoday/formatjs-scripts](/packages/formatjs-scripts) – Extract and compile messages, scan `node_modules` for messages
+- [@twoday/generator-twoday](/packages/generator-twoday) – [Yeoman](https://yeoman.io) npm package generator for this repository
+- [@twoday/react-openapi-client-generator](/packages/react-openapi-client-generator) – Generate typed hooks and methods for React app from OpenAPI schema
+- [@twoday/remix-ssg](/packages/remix-ssg) – Generate static site from Remix app
 
 ### Helpers & Utilities
 
-- [@visma/msw-openapi-backend-integration](/packages/msw-openapi-backend-integration) – Helper to integrate [Mock Service Worker](https://mswjs.io/) with [OpenAPI Backend](https://github.com/anttiviljami/openapi-backend)
-- [@visma/react-app-locale-utils](/packages/react-app-locale-utils) – Locale state, display names, date-fns, MUI and other locale utilities
-- [@visma/react-app-super-template](/packages/react-app-super-template) – `AppProvider` for super-template
-- [@visma/react-intl-bundled-messages](/packages/react-intl-bundled-messages) – [`IntlProvider`](https://formatjs.io/docs/react-intl/components/) that lazy loads messages in [current language](/packages/react-app-locale-utils#usage) in Webpack environment
-- [@visma/react-keycloak](/packages/react-keycloak) – Keycloak helper components, hooks, etc.
-- [@visma/tailwindcss-vud](/packages/tailwindcss-vud) – [Visma Unified Design](https://ux.visma.com/guidelines-resources/) theme configuration for [tailwindcss](https://tailwindcss.com)
-- ~[@visma/tailwindcss-nordic-cool](/packages/tailwindcss-nordic-cool) – [Nordic cool](https://ux.visma.com/weblibrary/latest/) theme configuration for [tailwindcss](https://tailwindcss.com)~ (deprecated)
+- [@twoday/msw-openapi-backend-integration](/packages/msw-openapi-backend-integration) – Helper to integrate [Mock Service Worker](https://mswjs.io/) with [OpenAPI Backend](https://github.com/anttiviljami/openapi-backend)
+- [@twoday/react-app-locale-utils](/packages/react-app-locale-utils) – Locale state, display names, date-fns, MUI and other locale utilities
+- [@twoday/react-app-super-template](/packages/react-app-super-template) – `AppProvider` for super-template
+- [@twoday/react-intl-bundled-messages](/packages/react-intl-bundled-messages) – [`IntlProvider`](https://formatjs.io/docs/react-intl/components/) that lazy loads messages in [current language](/packages/react-app-locale-utils#usage) in Webpack environment
+- [@twoday/react-keycloak](/packages/react-keycloak) – Keycloak helper components, hooks, etc.
 
 ### Configs
 
-- [@visma/eslint-config-super-template](/packages/eslint-config-super-template) – ESLint configuration for super-template
-- [@visma/public.config](/packages/public.config) – Public build, deploy & runtime configs in `globalThis.ENV`, dynamic by hostname
-- [@visma/tsconfig](/packages/tsconfig) – Shared base TSConfigs
+- [@twoday/eslint-config-super-template](/packages/eslint-config-super-template) – ESLint configuration for super-template
+- [@twoday/public.config](/packages/public.config) – Public build, deploy & runtime configs in `globalThis.ENV`, dynamic by hostname
+- [@twoday/tsconfig](/packages/tsconfig) – Shared base TSConfigs
 
 ## How to add a new package?
 
@@ -50,7 +47,7 @@ Contributions are welcome!
 
    ```sh
    npm install
-   npx yo @visma/visma
+   npx yo @twoday/twoday
    ```
 
 3. If the package has files to be deployed to GitHub Pages, add paths to [ci.yml](.github/workflows/ci.yml#L45)
@@ -69,14 +66,14 @@ Contributions are welcome!
 
 ### Naming
 
-- Every package must use the `@visma` scope
+- Every package must use the `@twoday` scope
 - If the package is for a specific technology, prefix with that. Examples:
-  - `@visma/react-foo`
-  - `@visma/babel-preset-bar`
-  - `@visma/angular-baz`
-  - `@visma/mui-qux`
+  - `@twoday/react-foo`
+  - `@twoday/babel-preset-bar`
+  - `@twoday/angular-baz`
+  - `@twoday/mui-qux`
 - If the package is an integration between external packages, list names alphabetically, join using kebab case, and suffix with `-integration`. Example:
-  - `@visma/msw-openapi-backend-integration`
+  - `@twoday/msw-openapi-backend-integration`
 
 ### Versioning
 

@@ -1,4 +1,4 @@
-# @visma/public.config
+# @twoday/public.config
 
 Public build, deploy & runtime configs in `globalThis.ENV`, dynamic by hostname.
 
@@ -6,7 +6,7 @@ Public build, deploy & runtime configs in `globalThis.ENV`, dynamic by hostname.
 
 ```js
 // import once, before accessing the values
-import '@visma/public.config';
+import '@twoday/public.config';
 
 // ...
 
@@ -55,7 +55,7 @@ The browser should receive something like this from the server:
 Alternatively, load config at runtime before importing other modules:
 
 ```js
-import loadRuntimeConfig from '@visma/public.config/lib/loadRuntimeConfig.js';
+import loadRuntimeConfig from '@twoday/public.config/lib/loadRuntimeConfig.js';
 
 const url = process.env.PUBLIC_URL + '/path/to/config.json';
 

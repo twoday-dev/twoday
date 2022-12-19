@@ -1,4 +1,4 @@
-import '@visma/public.config/config';
+import '@twoday/public.config/config';
 import { createHash } from 'crypto';
 import fg from 'fast-glob';
 import fs from 'fs-extra';
@@ -43,7 +43,7 @@ const dateFnsLocales = (globalThis.ENV?.LOCALES ?? []).map((locale) => {
 });
 
 const dateFnsLocaleVitePlugin = createPlugin(
-  '@visma/vite-plugin-date-fns-locale',
+  '@twoday/vite-plugin-date-fns-locale',
   'dynamic-import-date-fns-locales',
   `export default {
   ${dateFnsLocales

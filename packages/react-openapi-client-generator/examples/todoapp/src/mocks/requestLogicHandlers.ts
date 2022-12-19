@@ -1,4 +1,4 @@
-import { RequestLogicHandlers } from '@visma/msw-openapi-backend-integration';
+import { RequestLogicHandlers } from '@twoday/msw-openapi-backend-integration';
 import type { Components } from '../client';
 
 export const definition = require('../TodoMVC-API.json');
@@ -12,18 +12,18 @@ const items: Components.Schemas.Items =
 const requestLogicHandlers: RequestLogicHandlers = {
   postItem(request) {
     items.push({
-      ...(request.body as object),
+      ...(request.requestBody as object),
       timestamp: Date.now(),
       _id: String(id++),
     });
   },
   putItem(request) {
-    const item = request.body as Components.Schemas.Item;
+    const item = request.requestBody as Components.Schemas.Item;
     const index = items.findIndex((item) => item._id === request.params.itemId);
     items[index] = item;
   },
   putItems(request) {
-    const itemUpdates = request.body as Components.Schemas.Items;
+    const itemUpdates = request.requestBody as Components.Schemas.Items;
     for (const itemUpdate of itemUpdates) {
       const index = items.findIndex((item) => item._id === itemUpdate._id);
       items[index] = itemUpdate;
@@ -34,7 +34,7 @@ const requestLogicHandlers: RequestLogicHandlers = {
     items.splice(index, 1);
   },
   deleteItems(request) {
-    for (const id of request.body) {
+    for (const id of request.requestBody) {
       const index = items.findIndex((item) => item._id === id);
       items.splice(index, 1);
     }

@@ -1,4 +1,4 @@
-# @visma/eslint-config-super-template
+# @twoday/eslint-config-super-template
 
 ESLint configuration for super-template.
 
@@ -8,6 +8,6 @@ ESLint configuration for super-template.
 
 ```json
 {
-  "extends": "@visma/eslint-config-super-template"
+  "extends": "@twoday/eslint-config-super-template"
 }
 ```

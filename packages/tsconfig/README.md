@@ -1,4 +1,4 @@
-# @visma/tsconfig
+# @twoday/tsconfig
 
 Shared base TSConfigs.
 
@@ -8,7 +8,7 @@ Shared base TSConfigs.
 
 ```json
 {
-  "extends": "@visma/tsconfig/tsconfig.json",
+  "extends": "@twoday/tsconfig/tsconfig.json",
   "compilerOptions": {
     "outDir": "lib",
     "rootDir": "src"
@@ -19,4 +19,4 @@ Shared base TSConfigs.
 
 ### `react-library.json`
 
-With `@visma/tsconfig/react-library.json` you must also use [TS Patch](https://www.npmjs.com/package/ts-patch).
+With `@twoday/tsconfig/react-library.json` you must also use [TS Patch](https://www.npmjs.com/package/ts-patch).

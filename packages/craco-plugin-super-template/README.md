@@ -1,6 +1,6 @@
-# @visma/craco-plugin-super-template
+# @twoday/craco-plugin-super-template
 
-[CRACO](https://github.com/gsoft-inc/craco) plugin for [@visma/cra-template-craco-super-template](/packages/cra-template-craco-super-template).
+[CRACO](https://github.com/gsoft-inc/craco) plugin for [@twoday/cra-template-craco-super-template](/packages/cra-template-craco-super-template).
 
 ## Usage
 
@@ -9,7 +9,7 @@
 ```js
 module.exports = async ({ env }) => {
   return {
-    plugins: [(await import('@visma/craco-plugin-super-template')).default],
+    plugins: [(await import('@twoday/craco-plugin-super-template')).default],
   };
 };
 ```

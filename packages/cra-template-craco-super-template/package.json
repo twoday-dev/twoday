@@ -1,5 +1,5 @@
 {
-  "name": "@visma/cra-template-craco-super-template",
+  "name": "@twoday/cra-template-craco-super-template",
   "version": "0.1.3",
   "description": "Create React App template with multiple preinstalled libraries and predefined configurations.",
   "keywords": [
@@ -7,15 +7,15 @@
     "create-react-app",
     "template"
   ],
-  "homepage": "https://github.com/Visma-AS/visma/tree/main/packages/cra-template-craco-super-template",
+  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/cra-template-craco-super-template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Visma-AS/visma.git"
+    "url": "https://github.com/twoday-dev/twoday.git"
   },
   "license": "MIT",
   "author": {
     "name": "Arno Saine",
-    "email": "arno.saine@visma.com"
+    "email": "arno.saine@twoday.com"
   },
   "files": [
     "template",

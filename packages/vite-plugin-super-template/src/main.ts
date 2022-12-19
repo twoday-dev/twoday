@@ -1,7 +1,7 @@
-import dateFnsLocaleVitePlugin from '@visma/react-app-locale-utils/lib/dateFnsLocaleVitePlugin.js';
+import dateFnsLocaleVitePlugin from '@twoday/react-app-locale-utils/lib/dateFnsLocaleVitePlugin.js';
 import reactIntlBundledMessagesPlugin, {
   defaultOptions as reactIntlBundledMessages,
-} from '@visma/react-intl-bundled-messages/lib/vitePlugin.js';
+} from '@twoday/react-intl-bundled-messages/lib/vitePlugin.js';
 import react from '@vitejs/plugin-react';
 import dynamicImport from 'vite-plugin-dynamic-import';
 import envCompatible from 'vite-plugin-env-compatible';
@@ -23,7 +23,7 @@ export const defaultOptions = {
   favicons,
   react: {
     babel: {
-      presets: ['@visma/formatjs'],
+      presets: ['@twoday/formatjs'],
       plugins: ['codegen'],
     },
   },

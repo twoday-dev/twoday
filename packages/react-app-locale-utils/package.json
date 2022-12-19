@@ -1,16 +1,16 @@
 {
-  "name": "@visma/react-app-locale-utils",
+  "name": "@twoday/react-app-locale-utils",
   "version": "1.1.2",
   "description": "Locale state, display names, date-fns, MUI and other locale utilities.",
-  "homepage": "https://github.com/Visma-AS/visma/tree/main/packages/react-app-locale-utils",
+  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/react-app-locale-utils",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Visma-AS/visma.git"
+    "url": "https://github.com/twoday-dev/twoday.git"
   },
   "license": "ISC",
   "author": {
     "name": "Arno Saine",
-    "email": "arno.saine@visma.com"
+    "email": "arno.saine@twoday.com"
   },
   "type": "module",
   "exports": {
@@ -42,10 +42,11 @@
     "@material-ui/core": "^4.12.3",
     "@mui/material": "^5.0.2",
     "date-fns": "^2.24.0",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.3",
+    "vite": "^4.0.2"
   },
   "peerDependencies": {
-    "@visma/public.config": "^1.0.0"
+    "@twoday/public.config": "^1.0.0"
   },
   "publishConfig": {
     "access": "public",

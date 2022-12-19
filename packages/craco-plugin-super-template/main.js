@@ -1,6 +1,6 @@
 import { deepMergeWithArray } from '@craco/craco/lib/utils.js';
-import publicConfigWebpackAlias from '@visma/public.config/lib/webpackAlias.js';
-import bundledMessagesWebpackAlias from '@visma/react-intl-bundled-messages/lib/webpackAlias.js';
+import publicConfigWebpackAlias from '@twoday/public.config/lib/webpackAlias.js';
+import bundledMessagesWebpackAlias from '@twoday/react-intl-bundled-messages/lib/webpackAlias.js';
 
 const plugin = {
   plugin: {
@@ -13,7 +13,7 @@ const plugin = {
           },
         },
         babel: {
-          presets: ['@visma/formatjs'],
+          presets: ['@twoday/formatjs'],
           plugins: ['codegen'],
         },
       }),

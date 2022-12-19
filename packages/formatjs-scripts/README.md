@@ -1,4 +1,4 @@
-# @visma/formatjs-scripts
+# @twoday/formatjs-scripts
 
 Extract and compile messages, scan `node_modules` for messages.
 

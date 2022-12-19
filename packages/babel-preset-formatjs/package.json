@@ -1,16 +1,16 @@
 {
-  "name": "@visma/babel-preset-formatjs",
+  "name": "@twoday/babel-preset-formatjs",
   "version": "0.1.0",
   "description": "babel-plugin-formatjs with `removeDefaultMessage` set `true` in production.",
-  "homepage": "https://github.com/Visma-AS/visma/tree/main/packages/babel-preset-formatjs",
+  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/babel-preset-formatjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Visma-AS/visma.git"
+    "url": "https://github.com/twoday-dev/twoday.git"
   },
   "license": "ISC",
   "author": {
     "name": "Arno Saine",
-    "email": "arno.saine@visma.com"
+    "email": "arno.saine@twoday.com"
   },
   "main": "./main.js",
   "dependencies": {

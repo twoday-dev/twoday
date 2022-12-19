@@ -1,16 +1,16 @@
 {
-  "name": "@visma/vite-plugin-super-template",
+  "name": "@twoday/vite-plugin-super-template",
   "version": "0.1.7",
   "description": "Vite plugin for super-template.",
-  "homepage": "https://github.com/Visma-AS/visma/tree/main/packages/vite-plugin-super-template",
+  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/vite-plugin-super-template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Visma-AS/visma.git"
+    "url": "https://github.com/twoday-dev/twoday.git"
   },
   "license": "ISC",
   "author": {
     "name": "Arno Saine",
-    "email": "arno.saine@visma.com"
+    "email": "arno.saine@twoday.com"
   },
   "type": "module",
   "exports": {
@@ -32,9 +32,9 @@
   "dependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
     "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
-    "@visma/babel-preset-formatjs": "^0.1.0",
-    "@visma/react-app-locale-utils": "^1.1.0",
-    "@visma/react-intl-bundled-messages": "^1.1.0",
+    "@twoday/babel-preset-formatjs": "^0.1.0",
+    "@twoday/react-app-locale-utils": "^1.1.0",
+    "@twoday/react-intl-bundled-messages": "^1.1.0",
     "@vitejs/plugin-react": "^2.0.1",
     "babel-plugin-codegen": "^4.1.5",
     "rollup-plugin-node-polyfills": "^0.2.1",
@@ -45,7 +45,7 @@
     "vite-tsconfig-paths": "^3.5.0"
   },
   "devDependencies": {
-    "@visma/tsconfig": "^0.2.1",
+    "@twoday/tsconfig": "^1.1.3",
     "typescript": "^4.5.2",
     "vite": "^3.0.3"
   },

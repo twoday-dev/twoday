@@ -1,5 +1,5 @@
 {
-  "name": "@visma/eslint-config-super-template",
+  "name": "@twoday/eslint-config-super-template",
   "version": "0.1.0",
   "description": "ESLint configuration for super-template.",
   "main": "index.js",

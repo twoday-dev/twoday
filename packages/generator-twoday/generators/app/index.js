@@ -2,7 +2,7 @@ import { readdir } from 'fs/promises';
 import { camelCase, upperFirst } from 'lodash-es';
 import Generator from 'yeoman-generator';
 
-const scopePrefix = '@visma/';
+const scopePrefix = '@twoday/';
 
 export default class extends Generator {
   async prompting() {
@@ -16,11 +16,11 @@ export default class extends Generator {
       {
         type: 'input',
         name: 'name',
-        message: 'Package name? (@visma scope can be omitted here)',
+        message: 'Package name? (@twoday scope can be omitted here)',
         validate(value) {
           if (value.startsWith('@')) {
             if (!value.startsWith(scopePrefix)) {
-              return 'Please enter a valid package name. Only @visma scope is allowed.';
+              return 'Please enter a valid package name. Only @twoday scope is allowed.';
             }
           }
 

@@ -1,5 +1,5 @@
 {
-  "extends": "@visma/tsconfig/tsconfig.json",
+  "extends": "@twoday/tsconfig/tsconfig.json",
   "compilerOptions": {
     "outDir": "lib",
     "rootDir": "src"

@@ -1,16 +1,16 @@
 {
-  "name": "@visma/react-openapi-client-generator",
+  "name": "@twoday/react-openapi-client-generator",
   "version": "1.0.1",
   "description": "Generate typed hooks and methods for React app from OpenAPI schema.",
-  "homepage": "https://github.com/Visma-AS/visma/tree/main/packages/react-openapi-client-generator",
+  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/react-openapi-client-generator",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Visma-AS/visma.git"
+    "url": "https://github.com/twoday-dev/twoday.git"
   },
   "license": "ISC",
   "author": {
     "name": "Arno Saine",
-    "email": "arno.saine@visma.com"
+    "email": "arno.saine@twoday.com"
   },
   "type": "module",
   "bin": "./lib/main.js",

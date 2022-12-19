@@ -5,7 +5,7 @@ import { Plugin } from 'vite';
 import defaultExport from './defaultExport.js';
 
 const craLikePlugin: Plugin = {
-  name: '@visma/vite-plugin-super-template-cra-like',
+  name: '@twoday/vite-plugin-super-template-cra-like',
   config: (_config, { mode }) => ({
     server: {
       port: 3000,

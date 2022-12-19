@@ -2,7 +2,7 @@ import * as path from 'node:path';
 import { Plugin } from 'vite';
 
 const projectAliasPlugin: Plugin = {
-  name: '@visma/vite-plugin-super-template-project-alias',
+  name: '@twoday/vite-plugin-super-template-project-alias',
   config: (config) => ({
     resolve: {
       alias: {
