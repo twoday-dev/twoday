@@ -1,5 +1,5 @@
 import { Link } from '@remix-run/react';
-import christmasElfNameGenerator from '@visma/christmas-elf-name-generator';
+import christmasElfNameGenerator from '@twoday/christmas-elf-name-generator';
 import React, { useRef, useState } from 'react';
 import RubberBand from 'react-reveal/RubberBand';
 

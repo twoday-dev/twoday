@@ -1,6 +1,6 @@
 # 0.1.3
 
-- Add `@visma/public.config` Webpack resolve alias
+- Add `@twoday/public.config` Webpack resolve alias
 
 # 0.1.2
 

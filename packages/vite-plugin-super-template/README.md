@@ -1,4 +1,4 @@
-# @visma/vite-plugin-super-template
+# @twoday/vite-plugin-super-template
 
 [Vite](https://vitejs.dev/) plugin for super-template.
 
@@ -7,7 +7,7 @@
 `vite.config.js`:
 
 ```js
-import superTemplate from '@visma/vite-plugin-super-template';
+import superTemplate from '@twoday/vite-plugin-super-template';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -19,22 +19,22 @@ export default defineConfig({
 
 Default options can be tweaked or replaced entirely.
 
-#### Replace `@visma/babel-preset-formatjs` with `babel-plugin-formatjs`
+#### Replace `@twoday/babel-preset-formatjs` with `babel-plugin-formatjs`
 
 ```js
 import superTemplate, {
   defaultOptions,
-} from '@visma/vite-plugin-super-template';
+} from '@twoday/vite-plugin-super-template';
 import { defineConfig } from 'vite';
 
 const withOriginalFormatJSBabelPlugin = (options) => {
   const { plugins, presets } = options.react.babel;
 
-  const indexOfVismaFormatJSPreset = presets.findIndex(
-    (preset) => preset === '@visma/formatjs'
+  const indexOftwodayFormatJSPreset = presets.findIndex(
+    (preset) => preset === '@twoday/formatjs'
   );
 
-  presets.splice(indexOfVismaFormatJSPreset, 1);
+  presets.splice(indexOftwodayFormatJSPreset, 1);
   plugins.push('formatjs');
 
   return options;

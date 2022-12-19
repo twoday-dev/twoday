@@ -9,7 +9,7 @@ function git(command: string) {
 }
 
 const gitInfoPlugin: Plugin = {
-  name: '@visma/vite-plugin-super-template-git-info',
+  name: '@twoday/vite-plugin-super-template-git-info',
   config: () => ({
     define: {
       'ENV.GIT_VERSION': git('describe --always'),

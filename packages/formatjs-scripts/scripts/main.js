@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-import '@visma/public.config/config';
+import '@twoday/public.config/config';
 import '../lib/main.js';

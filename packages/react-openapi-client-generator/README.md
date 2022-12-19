@@ -1,12 +1,12 @@
-# @visma/react-openapi-client-generator
+# @twoday/react-openapi-client-generator
 
 Generate typed hooks and methods for React app from OpenAPI schema.
 
-[TodoMVC example](https://visma-as.github.io/visma/react-openapi-client-generator/examples/todoapp/)
+[TodoMVC example](https://twoday-dev.github.io/twoday/react-openapi-client-generator/examples/todoapp/)
 
 ## Setup in Create React App
 
-1. Install: `npm i @visma/react-openapi-client-generator`
+1. Install: `npm i @twoday/react-openapi-client-generator`
 2. Add API schema JSON, e.g. `src/petstore.json` ([examples](https://github.com/OAI/OpenAPI-Specification/blob/main/examples))
 3. Add scripts to `package.json`:
 

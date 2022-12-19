@@ -16,12 +16,12 @@
 
 # 1.1.0
 
-- Add `@visma/vite-plugin-react-intl-bundled-messages` (internal)
+- Add `@twoday/vite-plugin-react-intl-bundled-messages` (internal)
 
 # 1.0.0
 
 - **Breaking:** Switch to Vite. Remove support of `useMessages` in CRACO.
-- Upgrade to `@visma/react-app-locale-utils@^1.0.0`
+- Upgrade to `@twoday/react-app-locale-utils@^1.0.0`
 
 # 0.1.6
 

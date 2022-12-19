@@ -1,4 +1,4 @@
-import { handlers } from '@visma/msw-openapi-backend-integration';
+import { handlers } from '@twoday/msw-openapi-backend-integration';
 import definition from 'api/schema.json';
 import { setupWorker } from 'msw';
 

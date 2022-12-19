@@ -47,7 +47,7 @@ jobs:
           mkdir -p public/react-openapi-client-generator/examples/todoapp
           mkdir -p public/christmas-elf-name-generator
           mv packages/react-openapi-client-generator/examples/todoapp/build/* public/react-openapi-client-generator/examples/todoapp
-          mv packages/christmas-elf-name-generator/example/deploy/visma/christmas-elf-name-generator/* public/christmas-elf-name-generator
+          mv packages/christmas-elf-name-generator/example/deploy/twoday/christmas-elf-name-generator/* public/christmas-elf-name-generator
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4

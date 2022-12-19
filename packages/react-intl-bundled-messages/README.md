@@ -1,4 +1,4 @@
-# @visma/react-intl-bundled-messages
+# @twoday/react-intl-bundled-messages
 
 [`IntlProvider`](https://formatjs.io/docs/react-intl/components/) that lazy loads messages in [current language](/packages/react-app-locale-utils#usage) in Webpack environment.
 
@@ -7,7 +7,7 @@
 1. Add module resolve alias. In Webpack config:
 
    ```js
-   import bundledMessagesWebpackAlias from '@visma/react-intl-bundled-messages/lib/webpackAlias.js';
+   import bundledMessagesWebpackAlias from '@twoday/react-intl-bundled-messages/lib/webpackAlias.js';
 
    export default {
      //...
@@ -19,11 +19,11 @@
    };
    ```
 
-2. Build messages using [@visma/formatjs-scripts](https://github.com/Visma-AS/visma/tree/main/packages/formatjs-scripts)
+2. Build messages using [@twoday/formatjs-scripts](https://github.com/twoday-dev/twoday/tree/main/packages/formatjs-scripts)
 3. Add `IntlProvider`:
 
    ```js
-   import { IntlProvider } from '@visma/react-intl-bundled-messages';
+   import { IntlProvider } from '@twoday/react-intl-bundled-messages';
 
    function App() {
      return <IntlProvider>...</IntlProvider>;

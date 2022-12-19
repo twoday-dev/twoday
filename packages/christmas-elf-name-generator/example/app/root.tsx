@@ -6,8 +6,6 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration,
-  useLocation,
 } from '@remix-run/react';
 import * as React from 'react';
 import globalStylesUrl from '~/styles/global.css';
@@ -46,10 +44,8 @@ function Document({
       </head>
       <body>
         {children}
-        <RouteChangeAnnouncement />
-        <ScrollRestoration />
         <Scripts />
-        {process.env.NODE_ENV === 'development' && <LiveReload />}
+        <LiveReload />
       </body>
     </html>
   );
@@ -64,13 +60,13 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
           <nav aria-label="Main navigation">
             <ul>
               <li>
-                <Link to="/visma/christmas-elf-name-generator">Home</Link>
+                <Link to="/twoday/christmas-elf-name-generator">Home</Link>
               </li>
               <li>
                 <a
                   rel="noopener noreferrer"
                   target="_blank"
-                  href="https://github.com/Visma-AS/visma/tree/main/packages/christmas-elf-name-generator"
+                  href="https://github.com/twoday-dev/twoday/tree/main/packages/christmas-elf-name-generator"
                 >
                   GitHub
                 </a>
@@ -95,66 +91,15 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
       <footer>
         <p>
           &copy;{' '}
-          <a rel="noopener noreferrer" target="_blank" href="https://visma.com">
-            Visma
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://twoday.com"
+          >
+            twoday
           </a>
         </p>
       </footer>
     </>
   );
 }
-
-/**
- * Provides an alert for screen reader users when the route changes.
- */
-const RouteChangeAnnouncement = React.memo(() => {
-  let [hydrated, setHydrated] = React.useState(false);
-  let [innerHtml, setInnerHtml] = React.useState('');
-  let location = useLocation();
-
-  React.useEffect(() => {
-    setHydrated(true);
-  }, []);
-
-  let firstRenderRef = React.useRef(true);
-  React.useEffect(() => {
-    // Skip the first render because we don't want an announcement on the
-    // initial page load.
-    if (firstRenderRef.current) {
-      firstRenderRef.current = false;
-      return;
-    }
-
-    let pageTitle = location.pathname === '/' ? 'Home page' : document.title;
-    setInnerHtml(`Navigated to ${pageTitle}`);
-  }, [location.pathname]);
-
-  // Render nothing on the server. The live region provides no value unless
-  // scripts are loaded and the browser takes over normal routing.
-  if (!hydrated) {
-    return null;
-  }
-
-  return (
-    <div
-      aria-live="assertive"
-      aria-atomic
-      id="route-change-region"
-      style={{
-        border: '0',
-        clipPath: 'inset(100%)',
-        clip: 'rect(0 0 0 0)',
-        height: '1px',
-        margin: '-1px',
-        overflow: 'hidden',
-        padding: '0',
-        position: 'absolute',
-        width: '1px',
-        whiteSpace: 'nowrap',
-        wordWrap: 'normal',
-      }}
-    >
-      {innerHtml}
-    </div>
-  );
-});

@@ -1,10 +1,10 @@
 {
   "name": "<%= name %>",
   "version": "0.1.0",
-  "homepage": "https://github.com/Visma-AS/visma/tree/main/packages/<%= path %>",
+  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/<%= path %>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Visma-AS/visma.git"
+    "url": "https://github.com/twoday-dev/twoday.git"
   },
   "license": "<%= license %>",
   "author": {

@@ -1,5 +1,5 @@
 import { setupServer } from 'msw/node';
-import { handlers } from '@visma/msw-openapi-backend-integration';
+import { handlers } from '@twoday/msw-openapi-backend-integration';
 import type { Document } from 'openapi-backend';
 import definition from '../TodoMVC-API.json';
 import requestLogicHandlers from './requestLogicHandlers';

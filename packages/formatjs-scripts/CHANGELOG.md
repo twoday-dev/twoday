@@ -1,8 +1,8 @@
 # 1.0.0
 
-- Upgrade to `@visma/react-app-locale-utils@^1.0.0`
-- Upgrade to `@visma/react-intl-bundled-messages@^1.0.0`
-- Set `@visma/public.config@^1.0.1` as a peer dependency
+- Upgrade to `@twoday/react-app-locale-utils@^1.0.0`
+- Upgrade to `@twoday/react-intl-bundled-messages@^1.0.0`
+- Set `@twoday/public.config@^1.0.1` as a peer dependency
 
 # 0.2.3
 
@@ -11,7 +11,7 @@
 # 0.2.2
 
 - Improve searching messages in dependencies
-- Upgrade to `@visma/react-intl-bundled-messages@0.1.5`
+- Upgrade to `@twoday/react-intl-bundled-messages@0.1.5`
 
 # 0.2.1
 
@@ -19,7 +19,7 @@
 
 # 0.2.0
 
-- **Breaking:** Move `export { target }` to `@visma/react-intl-bundled-messages`
+- **Breaking:** Move `export { target }` to `@twoday/react-intl-bundled-messages`
 - If `remix.config.js` is available, detect `appDirectory` from it
 - Scan also `jsx`, `ts` and `tsx` files for messages
 

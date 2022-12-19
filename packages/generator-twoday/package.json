@@ -1,5 +1,5 @@
 {
-  "name": "@visma/generator-visma",
+  "name": "@twoday/generator-twoday",
   "version": "0.1.0",
   "description": "Yeoman npm package generator for this repository.",
   "keywords": [

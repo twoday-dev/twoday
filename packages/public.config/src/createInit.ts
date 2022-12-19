@@ -38,7 +38,7 @@ const overrides = ([
 
 const toConfigByHostname = (config: ConfigOption): ConfigByHostname =>
   Array.isArray(config)
-    ? config
+    ? (config as ConfigByHostname)
     : [globalThis.location?.hostname ?? '', config];
 
 const hostnameSafe = (hostname: Hostname) => `.${hostname}`;

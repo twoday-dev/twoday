@@ -1,4 +1,4 @@
-import AppProvider from '@visma/react-app-super-template';
+import AppProvider from '@twoday/react-app-super-template';
 import { FormattedMessage, useIntl } from 'react-intl';
 import logo from '../logo.svg';
 import './App.css';

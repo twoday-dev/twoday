@@ -1,6 +1,6 @@
 # x.y.z
 
-- Add `.env` example how to use `@visma/react-keycloak` mock implementation of `ReactKeycloakProvider`
+- Add `.env` example how to use `@twoday/react-keycloak` mock implementation of `ReactKeycloakProvider`
 
 # 0.1.3
 

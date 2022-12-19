@@ -2,9 +2,9 @@ export default function Aside() {
   return (
     <aside className="learn">
       <header>
-        <h3>@visma/react-openapi-client-generator</h3>
+        <h3>@twoday/react-openapi-client-generator</h3>
         <h5>Example</h5>
-        <a href="https://github.com/Visma-AS/visma/tree/main/packages/react-openapi-client-generator/examples/todoapp">
+        <a href="https://github.com/twoday-dev/twoday/tree/main/packages/react-openapi-client-generator/examples/todoapp">
           Source
         </a>
       </header>
@@ -13,12 +13,12 @@ export default function Aside() {
       <ul>
         {[
           {
-            url: 'https://github.com/Visma-AS/visma/tree/main/packages/react-openapi-client-generator',
-            text: '@visma/react-openapi-client-generator',
+            url: 'https://github.com/twoday-dev/twoday/tree/main/packages/react-openapi-client-generator',
+            text: '@twoday/react-openapi-client-generator',
           },
           {
-            url: 'https://github.com/Visma-AS/visma/tree/main/packages/msw-openapi-backend-integration',
-            text: '@visma/msw-openapi-backend-integration',
+            url: 'https://github.com/twoday-dev/twoday/tree/main/packages/msw-openapi-backend-integration',
+            text: '@twoday/msw-openapi-backend-integration',
           },
           {
             url: 'https://github.com/ArnoSaine/postinumero/tree/main/packages/use-async',

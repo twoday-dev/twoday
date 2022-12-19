@@ -1,4 +1,4 @@
-import '@visma/public.config/config';
+import '@twoday/public.config/config';
 import { createHash } from 'crypto';
 import fs from 'fs-extra';
 import * as path from 'node:path';
@@ -20,7 +20,7 @@ interface Options {
 }
 
 const mainPlugin = createPlugin(
-  '@visma/vite-plugin-react-intl-bundled-messages',
+  '@twoday/vite-plugin-react-intl-bundled-messages',
   'dynamic-import-messages',
   `export default {
 ${(globalThis.ENV?.LOCALES ?? [])
@@ -37,7 +37,7 @@ ${(globalThis.ENV?.LOCALES ?? [])
 );
 
 const noParserPlugin: Plugin = {
-  name: '@visma/vite-plugin-icu-messageformat-no-parser',
+  name: '@twoday/vite-plugin-icu-messageformat-no-parser',
   config: (_config, { mode }) => ({
     resolve: {
       alias: {

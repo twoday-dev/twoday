@@ -1,16 +1,16 @@
 {
-  "name": "@visma/formatjs-scripts",
+  "name": "@twoday/formatjs-scripts",
   "version": "1.0.0",
   "description": "Extract and compile messages, scan `node_modules` for messages.",
-  "homepage": "https://github.com/Visma-AS/visma/tree/main/packages/formatjs-scripts",
+  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/formatjs-scripts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Visma-AS/visma.git"
+    "url": "https://github.com/twoday-dev/twoday.git"
   },
   "license": "ISC",
   "author": {
     "name": "Arno Saine",
-    "email": "arno.saine@visma.com"
+    "email": "arno.saine@twoday.com"
   },
   "type": "module",
   "bin": "./scripts/main.js",
@@ -24,8 +24,8 @@
   },
   "dependencies": {
     "@formatjs/cli": "^4.2.33",
-    "@visma/react-app-locale-utils": "^1.0.0",
-    "@visma/react-intl-bundled-messages": "^1.0.0",
+    "@twoday/react-app-locale-utils": "^1.0.0",
+    "@twoday/react-intl-bundled-messages": "^1.0.0",
     "fast-glob": "^3.2.7",
     "fs-extra": "^10.0.0",
     "read-pkg-up": "^9.1.0"
@@ -35,7 +35,7 @@
     "typescript": "^4.4.3"
   },
   "peerDependencies": {
-    "@visma/public.config": "^1.0.1"
+    "@twoday/public.config": "^1.0.1"
   },
   "publishConfig": {
     "access": "public",

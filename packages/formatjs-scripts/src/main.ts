@@ -2,9 +2,9 @@
 
 import { compile, extract } from '@formatjs/cli';
 import type { PseudoLocale } from '@formatjs/cli/src/compile';
-import defaultLocale from '@visma/react-app-locale-utils/lib/defaultLocale.js';
-import locales from '@visma/react-app-locale-utils/lib/locales.js';
-import target from '@visma/react-intl-bundled-messages/lib/target.js';
+import defaultLocale from '@twoday/react-app-locale-utils/lib/defaultLocale.js';
+import locales from '@twoday/react-app-locale-utils/lib/locales.js';
+import target from '@twoday/react-intl-bundled-messages/lib/target.js';
 import fg from 'fast-glob';
 import fsExtra from 'fs-extra';
 import { mkdir, writeFile } from 'node:fs/promises';

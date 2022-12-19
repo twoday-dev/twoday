@@ -1,4 +1,4 @@
-# @visma/react-keycloak
+# @twoday/react-keycloak
 
 Keycloak helper components, hooks, etc.
 
@@ -7,7 +7,7 @@ Keycloak helper components, hooks, etc.
 ### `useCurrentUser`
 
 ```js
-import { useCurrentUser } from '@visma/react-keycloak';
+import { useCurrentUser } from '@twoday/react-keycloak';
 
 const user = useCurrentUser();
 ```
@@ -17,7 +17,7 @@ const user = useCurrentUser();
 `fallback` and `children` props are optional.
 
 ```js
-import { HasRole } from '@visma/react-keycloak';
+import { HasRole } from '@twoday/react-keycloak';
 
 <HasRole realm="admin" fallback={<Unauthorized />}>
   <AdminPanel />
@@ -47,7 +47,7 @@ Shorthand to check for realm and current `clientId` resource roles:
 `fallback` and `children` props are optional.
 
 ```js
-import { IsAuthenticated } from '@visma/react-keycloak';
+import { IsAuthenticated } from '@twoday/react-keycloak';
 
 <IsAuthenticated fallback={<Public />}>
   <Private />
@@ -57,7 +57,7 @@ import { IsAuthenticated } from '@visma/react-keycloak';
 ### `useHasRole`
 
 ```js
-import { useHasRole } from '@visma/react-keycloak';
+import { useHasRole } from '@twoday/react-keycloak';
 
 const isAdmin = useHasRole({ realm: 'admin' });
 ```
@@ -88,7 +88,7 @@ const isFooOrBar = useHasRole(['foo', 'bar']);
 ### `useIsAuthenticated`
 
 ```js
-import { useIsAuthenticated } from '@visma/react-keycloak';
+import { useIsAuthenticated } from '@twoday/react-keycloak';
 
 const isAuthenticated = useIsAuthenticated();
 ```
@@ -102,16 +102,16 @@ const isAuthenticated = useIsAuthenticated();
 Stores `token` and `refreshToken` in `localStorage`. Authentication is shared live between browser tabs.
 
 ```js
-import { withPageRefreshSupport } from '@visma/react-keycloak';
+import { withPageRefreshSupport } from '@twoday/react-keycloak';
 import { ReactKeycloakProvider as Provider } from '@react-keycloak/web';
 
 const ReactKeycloakProvider = withPageRefreshSupport(Provider);
 ```
 
-On logout, use `useKeycloak` from `@visma/react-keycloak`, to sync logout with other tabs:
+On logout, use `useKeycloak` from `@twoday/react-keycloak`, to sync logout with other tabs:
 
 ```js
-import { useKeycloak } from '@visma/react-keycloak';
+import { useKeycloak } from '@twoday/react-keycloak';
 
 const { keycloak } = useKeycloak();
 
@@ -129,7 +129,7 @@ const { keycloak } = useKeycloak();
 Updates `Authorization: Bearer <token>` in given axios instance.
 
 ```js
-import { withAxiosAuthorizationHeaderUpdater } from '@visma/react-keycloak';
+import { withAxiosAuthorizationHeaderUpdater } from '@twoday/react-keycloak';
 import { ReactKeycloakProvider as Provider } from '@react-keycloak/web';
 import axios from 'axios';
 
