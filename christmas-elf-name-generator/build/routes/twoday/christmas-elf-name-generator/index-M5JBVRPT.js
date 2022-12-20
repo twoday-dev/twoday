@@ -1,0 +1,1 @@
+import{a as e,b as t}from"/twoday/christmas-elf-name-generator/build/_shared/chunk-B6RKGDVA.js";import"/twoday/christmas-elf-name-generator/build/_shared/chunk-GMTEGAZW.js";export{t as default,e as meta};
