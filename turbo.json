@@ -3,7 +3,15 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["build/**", "deploy/**", "dist/**", "lib/**"]
+      "outputs": [
+        "build/**",
+        "deploy/**",
+        "dist/**",
+        "lib/**",
+        "example/build/**",
+        "example/deploy/**",
+        "examples/*/build/**"
+      ]
     },
     "test": {
       "dependsOn": ["lint", "build"],
