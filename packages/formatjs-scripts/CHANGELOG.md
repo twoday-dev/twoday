@@ -1,3 +1,5 @@
+# @twoday/formatjs-scripts
+
 ## 1.0.0
 
 - Upgrade to `@twoday/react-app-locale-utils@^1.0.0`

@@ -1,3 +1,5 @@
+# @twoday/tsconfig
+
 ## 1.1.3
 
 - Revert changes in `1.1.1`. Development builds benefit from default messages.

@@ -1,3 +1,5 @@
+# @twoday/christmas-elf-name-generator
+
 ## 0.1.1
 
 - Remove example from the published package

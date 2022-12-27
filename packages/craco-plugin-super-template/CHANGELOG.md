@@ -1,3 +1,5 @@
+# @twoday/craco-plugin-super-template
+
 ## 0.1.3
 
 - Add `@twoday/public.config` Webpack resolve alias

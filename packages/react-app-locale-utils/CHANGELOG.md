@@ -1,3 +1,5 @@
+# @twoday/react-app-locale-utils
+
 ## 1.1.2
 
 - Fix dynamic import path in Windows

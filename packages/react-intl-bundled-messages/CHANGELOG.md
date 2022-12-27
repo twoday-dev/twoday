@@ -1,3 +1,5 @@
+# @twoday/react-intl-bundled-messages
+
 ## 1.3.1
 
 - Fix dynamic import path in Windows
