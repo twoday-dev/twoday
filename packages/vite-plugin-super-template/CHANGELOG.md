@@ -1,3 +1,5 @@
+# @twoday/vite-plugin-super-template
+
 ## 0.1.7
 
 - Add `@twoday/vite-plugin-super-template-optimize-openapi-patch` (internal)
