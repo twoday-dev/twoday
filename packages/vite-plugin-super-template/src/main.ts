@@ -15,6 +15,7 @@ import faviconsPlugin, {
 import gitInfoPlugin from './gitInfoPlugin.js';
 import optimizeOpenAPIPatchPlugin from './optimizeOpenAPIPatchPlugin.js';
 import projectAliasPlugin from './projectAliasPlugin.js';
+import superTemplatePlugin from './superTemplatePlugin.js';
 
 export const defaultOptions = {
   envCompatible: {
@@ -55,6 +56,7 @@ export default function superTemplate(options?: Options) {
     projectAliasPlugin,
     react(options?.react ?? defaultOptions.react),
     reactIntlBundledMessagesPlugin(options?.reactIntlBundledMessages),
+    superTemplatePlugin,
     tsconfigPaths(),
   ];
 }
