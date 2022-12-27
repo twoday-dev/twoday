@@ -1,5 +1,11 @@
 # @twoday/vite-plugin-super-template
 
+## 0.1.8
+
+### Patch Changes
+
+- f5c9758: Use source maps in production
+
 ## 0.1.7
 
 - Add `@twoday/vite-plugin-super-template-optimize-openapi-patch` (internal)

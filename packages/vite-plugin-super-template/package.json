@@ -1,6 +1,6 @@
 {
   "name": "@twoday/vite-plugin-super-template",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Vite plugin for super-template.",
   "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/vite-plugin-super-template",
   "repository": {
