@@ -1,6 +1,6 @@
 {
   "name": "@twoday/eslint-config-super-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ESLint configuration for super-template.",
   "main": "index.js",
   "dependencies": {
