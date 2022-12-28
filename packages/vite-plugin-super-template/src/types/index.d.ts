@@ -1,1 +1,1 @@
-declare module 'vite-plugin-favicons-inject';
+declare module "vite-plugin-favicons-inject";

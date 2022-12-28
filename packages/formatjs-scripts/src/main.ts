@@ -1,31 +1,31 @@
 /* eslint-disable no-console */
 
-import { compile, extract } from '@formatjs/cli';
-import type { PseudoLocale } from '@formatjs/cli/src/compile';
-import defaultLocale from '@twoday/react-app-locale-utils/lib/defaultLocale.js';
-import locales from '@twoday/react-app-locale-utils/lib/locales.js';
-import target from '@twoday/react-intl-bundled-messages/lib/target.js';
-import fg from 'fast-glob';
-import fsExtra from 'fs-extra';
-import { mkdir, writeFile } from 'node:fs/promises';
-import { createRequire } from 'node:module';
-import { dirname } from 'node:path';
-import { readPackageUp } from 'read-pkg-up';
+import { compile, extract } from "@formatjs/cli";
+import type { PseudoLocale } from "@formatjs/cli/src/compile";
+import defaultLocale from "@twoday/react-app-locale-utils/lib/defaultLocale.js";
+import locales from "@twoday/react-app-locale-utils/lib/locales.js";
+import target from "@twoday/react-intl-bundled-messages/lib/target.js";
+import fg from "fast-glob";
+import fsExtra from "fs-extra";
+import { mkdir, writeFile } from "node:fs/promises";
+import { createRequire } from "node:module";
+import { dirname } from "node:path";
+import { readPackageUp } from "read-pkg-up";
 
-const source = 'lang';
+const source = "lang";
 
 async function main() {
-  let appDirectory = 'src';
+  let appDirectory = "src";
 
   try {
-    const { readConfig } = await import('@remix-run/dev/dist/config.js');
+    const { readConfig } = await import("@remix-run/dev/dist/config.js");
     appDirectory = (await readConfig()).appDirectory;
   } catch {}
 
   const resultAsString = await extract(
     await fg([`${appDirectory}/**/*.{j,t}s{,x}`, `!**/*.d.ts`]),
     {
-      idInterpolationPattern: '[sha512:contenthash:base64:6]',
+      idInterpolationPattern: "[sha512:contenthash:base64:6]",
     }
   );
 
@@ -36,9 +36,9 @@ async function main() {
   await mkdir(target, { recursive: true });
   await fsExtra.emptyDir(target);
 
-  console.log('Compiling messages...');
+  console.log("Compiling messages...");
 
-  const pseudoLocales = ['en-XA', 'xx-AC', 'xx-HA', 'xx-LS'];
+  const pseudoLocales = ["en-XA", "xx-AC", "xx-HA", "xx-LS"];
 
   const dependencyPaths = await getDependencyPaths();
   const defaultLocaleFiles = defaultLocale
@@ -66,7 +66,7 @@ async function main() {
     }
   }
 
-  console.log('Done!');
+  console.log("Done!");
 }
 
 main();

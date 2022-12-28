@@ -49,7 +49,7 @@ This will prefix the import path with `!json-loader!` and with `yaml-loader!` in
 Each `GET` operation is available as a hook. Hooks return the response data directly. **This is the main approach to fetch data for rendering**. Requests are memoized, so it is fine to call the hooks in any component, right where the data is needed.
 
 ```js
-import { useItems } from './client';
+import { useItems } from "./client";
 
 function List() {
   const items = useItems();
@@ -62,9 +62,9 @@ function List() {
 After updating the the data in the backend, the UI must be notified to refetch certain paths. For this there are `refetch*` methods for each `GET` operation (hook). Calling refetch does nothing if there are no components currently mounted using the corresponding hooks. This means it is safe to call `refetch*` just in case, whenever the data has been mutated. It is recommended to put these "mutation / what needs to be refetch" rules to a separate file, for example `api.js`:
 
 ```js
-import * as client from './client';
+import * as client from "./client";
 
-export * from './client';
+export * from "./client";
 
 export async function postItem(item) {
   await client.postItem(null, item);
@@ -99,7 +99,7 @@ It is not allowed by the [Rules of Hooks](https://reactjs.org/docs/hooks-rules.h
 You may use [react-error-boundary](https://github.com/bvaughn/react-error-boundary) for general error handling. If you make request to an endpoint that may intentionally fail and you need to handle the error in the same component, each hook has a `*Safe` version for that. For example a search response may have status code 404 and we don't want to use the general error boundary for that:
 
 ```js
-import { useSearchSafe } from './client';
+import { useSearchSafe } from "./client";
 
 function SearchResults({ query }) {
   const [
@@ -119,7 +119,7 @@ function SearchResults({ query }) {
 There are `*Raw` versions of the hooks and API methods for accessing the complete axios response:
 
 ```js
-import { useFooRaw, postFooRaw } from './client';
+import { useFooRaw, postFooRaw } from "./client";
 
 function App() {
   const { headers, data } = useFooRaw();

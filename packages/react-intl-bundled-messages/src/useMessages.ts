@@ -1,5 +1,5 @@
-import { create } from '@postinumero/use-async';
-import messagesDynamicImports from '@twoday/vite-plugin-react-intl-bundled-messages/dynamic-import-messages';
+import { create } from "@postinumero/use-async";
+import messagesDynamicImports from "@twoday/vite-plugin-react-intl-bundled-messages/dynamic-import-messages";
 
 const [, , useImportMessagesSafe] = create(
   (locale: string) => messagesDynamicImports[locale]?.() ?? Promise.resolve()

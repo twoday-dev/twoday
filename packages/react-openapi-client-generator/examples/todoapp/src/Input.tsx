@@ -1,5 +1,5 @@
-import { useRef } from 'react';
-import { postItem } from './api';
+import { useRef } from "react";
+import { postItem } from "./api";
 
 export default function Input() {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -13,9 +13,9 @@ export default function Input() {
         const input = inputRef.current;
         if (input) {
           const title = input.value.trim();
-          if (key === 'Enter' && title) {
+          if (key === "Enter" && title) {
             await postItem({ title });
-            input.value = '';
+            input.value = "";
           }
         }
       }}

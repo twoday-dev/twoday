@@ -1,4 +1,4 @@
-import { useKeycloak } from '@react-keycloak/web';
+import { useKeycloak } from "@react-keycloak/web";
 
 export default function useCurrentUser() {
   const { keycloak } = useKeycloak();

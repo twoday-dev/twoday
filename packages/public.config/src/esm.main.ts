@@ -1,3 +1,3 @@
-import init from './esm.init.js';
+import init from "./esm.init.js";
 
 init();

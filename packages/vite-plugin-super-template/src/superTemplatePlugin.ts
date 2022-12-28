@@ -1,7 +1,7 @@
-import { Plugin } from 'vite';
+import { Plugin } from "vite";
 
 const superTemplatePlugin: Plugin = {
-  name: '@twoday/super-template',
+  name: "@twoday/super-template",
   config: () => ({
     build: {
       sourcemap: true,

@@ -1,7 +1,7 @@
-declare module '@twoday/vite-plugin-react-intl-bundled-messages/dynamic-import-messages' {
+declare module "@twoday/vite-plugin-react-intl-bundled-messages/dynamic-import-messages" {
   interface T {
     [locale: string]: () => Promise<{
-      default: import('react-intl').IntlProvider['props']['messages'];
+      default: import("react-intl").IntlProvider["props"]["messages"];
     }>;
   }
   const messagesDynamicImports: T;

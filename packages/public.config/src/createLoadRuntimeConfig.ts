@@ -1,5 +1,5 @@
-import axios from 'axios';
-import createInit from './createInit.js';
+import axios from "axios";
+import createInit from "./createInit.js";
 
 export default function createLoadRuntimeConfig(
   init: ReturnType<typeof createInit>

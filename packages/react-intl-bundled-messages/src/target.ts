@@ -1,1 +1,1 @@
-export default '.compiled-lang';
+export default ".compiled-lang";

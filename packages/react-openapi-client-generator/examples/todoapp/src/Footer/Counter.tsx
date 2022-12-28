@@ -1,4 +1,4 @@
-import { useItems } from '../api';
+import { useItems } from "../api";
 
 export default function Counter() {
   const items = useItems();
@@ -7,7 +7,7 @@ export default function Counter() {
 
   return (
     <span className="todo-count">
-      {length} {length === 1 ? 'item' : 'items'} left
+      {length} {length === 1 ? "item" : "items"} left
     </span>
   );
 }

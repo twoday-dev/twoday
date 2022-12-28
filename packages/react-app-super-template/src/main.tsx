@@ -1,3 +1,3 @@
-import './patchGlobals.js';
+import "./patchGlobals.js";
 
-export { default } from './AppProvider.js';
+export { default } from "./AppProvider.js";

@@ -1,14 +1,14 @@
-import useLocalStorageJson from '@postinumero/storage/lib/useLocalStorageJson.js';
-import jwt_decode from 'jwt-decode';
-import React, { useEffect, useState } from 'react';
-import type { Props, Provider } from '../index.js';
+import useLocalStorageJson from "@postinumero/storage/lib/useLocalStorageJson.js";
+import jwt_decode from "jwt-decode";
+import React, { useEffect, useState } from "react";
+import type { Props, Provider } from "../index.js";
 import withLocalStorageKeyContext, {
   useLocalStorageKey,
-} from './withLocalStorageKeyContext.js';
+} from "./withLocalStorageKeyContext.js";
 
 export const initOptions = {
   checkLoginIframe: false,
-  pkceMethod: 'S256',
+  pkceMethod: "S256",
   onLoad: null,
 };
 

@@ -1,31 +1,31 @@
-import dateFnsLocaleVitePlugin from '@twoday/react-app-locale-utils/lib/dateFnsLocaleVitePlugin.js';
+import dateFnsLocaleVitePlugin from "@twoday/react-app-locale-utils/lib/dateFnsLocaleVitePlugin.js";
 import reactIntlBundledMessagesPlugin, {
   defaultOptions as reactIntlBundledMessages,
-} from '@twoday/react-intl-bundled-messages/lib/vitePlugin.js';
-import react from '@vitejs/plugin-react';
-import dynamicImport from 'vite-plugin-dynamic-import';
-import envCompatible from 'vite-plugin-env-compatible';
-import tsconfigPaths from 'vite-tsconfig-paths';
-import craLikePlugin from './craLikePlugin.js';
-import defaultExport from './defaultExport.js';
-import dynamicBase from './dynamicBase.js';
+} from "@twoday/react-intl-bundled-messages/lib/vitePlugin.js";
+import react from "@vitejs/plugin-react";
+import dynamicImport from "vite-plugin-dynamic-import";
+import envCompatible from "vite-plugin-env-compatible";
+import tsconfigPaths from "vite-tsconfig-paths";
+import craLikePlugin from "./craLikePlugin.js";
+import defaultExport from "./defaultExport.js";
+import dynamicBase from "./dynamicBase.js";
 import faviconsPlugin, {
   defaultOptions as favicons,
-} from './faviconsPlugin.js';
-import gitInfoPlugin from './gitInfoPlugin.js';
-import optimizeOpenAPIPatchPlugin from './optimizeOpenAPIPatchPlugin.js';
-import projectAliasPlugin from './projectAliasPlugin.js';
-import superTemplatePlugin from './superTemplatePlugin.js';
+} from "./faviconsPlugin.js";
+import gitInfoPlugin from "./gitInfoPlugin.js";
+import optimizeOpenAPIPatchPlugin from "./optimizeOpenAPIPatchPlugin.js";
+import projectAliasPlugin from "./projectAliasPlugin.js";
+import superTemplatePlugin from "./superTemplatePlugin.js";
 
 export const defaultOptions = {
   envCompatible: {
-    prefix: 'REACT_APP_',
+    prefix: "REACT_APP_",
   },
   favicons,
   react: {
     babel: {
-      presets: ['@twoday/formatjs'],
-      plugins: ['codegen'],
+      presets: ["@twoday/formatjs"],
+      plugins: ["codegen"],
     },
   },
   reactIntlBundledMessages,

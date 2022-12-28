@@ -7,7 +7,7 @@
 1. Add module resolve alias. In Webpack config:
 
    ```js
-   import bundledMessagesWebpackAlias from '@twoday/react-intl-bundled-messages/lib/webpackAlias.js';
+   import bundledMessagesWebpackAlias from "@twoday/react-intl-bundled-messages/lib/webpackAlias.js";
 
    export default {
      //...
@@ -23,7 +23,7 @@
 3. Add `IntlProvider`:
 
    ```js
-   import { IntlProvider } from '@twoday/react-intl-bundled-messages';
+   import { IntlProvider } from "@twoday/react-intl-bundled-messages";
 
    function App() {
      return <IntlProvider>...</IntlProvider>;

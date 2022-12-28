@@ -1,5 +1,5 @@
-import defaultLocale from './defaultLocale.js';
-import locales from './locales.js';
+import defaultLocale from "./defaultLocale.js";
+import locales from "./locales.js";
 
 declare namespace Intl {
   interface Collator {
@@ -32,16 +32,16 @@ type DisplayName = {
 
 const regionsAndLanguages: RegionAndLanguage[] = locales.map(
   (locale: string) => {
-    const [language, region] = locale.split('-');
+    const [language, region] = locale.split("-");
 
     return {
       locale,
       region: new Intl.DisplayNames(locale, {
-        type: 'region',
+        type: "region",
       }).of(region!),
 
       language: new Intl.DisplayNames(locale, {
-        type: 'language',
+        type: "language",
       }).of(language!),
     };
   }

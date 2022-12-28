@@ -1,4 +1,4 @@
-import type { LinksFunction } from '@remix-run/node';
+import type { LinksFunction } from "@remix-run/node";
 import {
   Link,
   Links,
@@ -6,12 +6,12 @@ import {
   Meta,
   Outlet,
   Scripts,
-} from '@remix-run/react';
-import * as React from 'react';
-import globalStylesUrl from '~/styles/global.css';
+} from "@remix-run/react";
+import * as React from "react";
+import globalStylesUrl from "~/styles/global.css";
 
 export let links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: globalStylesUrl }];
+  return [{ rel: "stylesheet", href: globalStylesUrl }];
 };
 
 export default function App() {
@@ -90,7 +90,7 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
       </main>
       <footer>
         <p>
-          &copy;{' '}
+          &copy;{" "}
           <a
             rel="noopener noreferrer"
             target="_blank"

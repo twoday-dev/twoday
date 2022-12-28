@@ -6,7 +6,7 @@ Public build, deploy & runtime configs in `globalThis.ENV`, dynamic by hostname.
 
 ```js
 // import once, before accessing the values
-import '@twoday/public.config';
+import "@twoday/public.config";
 
 // ...
 
@@ -29,7 +29,7 @@ Write values in `window.ENV` in a `<script>` tag before the any other script tag
 
 ```js
 html.replace(
-  '<!-- overrides placeholder -->',
+  "<!-- overrides placeholder -->",
   `<script>
 window.ENV = ${JSON.stringify(data)};
 </script>`
@@ -44,7 +44,7 @@ The browser should receive something like this from the server:
   ...
   <script>
     window.ENV = {
-      HELLO: 'world',
+      HELLO: "world",
     };
   </script>
   ...
@@ -55,19 +55,19 @@ The browser should receive something like this from the server:
 Alternatively, load config at runtime before importing other modules:
 
 ```js
-import loadRuntimeConfig from '@twoday/public.config/lib/loadRuntimeConfig.js';
+import loadRuntimeConfig from "@twoday/public.config/lib/loadRuntimeConfig.js";
 
-const url = process.env.PUBLIC_URL + '/path/to/config.json';
+const url = process.env.PUBLIC_URL + "/path/to/config.json";
 
 await loadRuntimeConfig(url);
 
-const App = (await import(/* webpackMode: "eager" */ './App')).default;
+const App = (await import(/* webpackMode: "eager" */ "./App")).default;
 ```
 
 > ℹ To use dynamic paths, `location` object values are available in the `url` when wrapped in `${}`. Example:
 >
 > ```js
-> const url = process.env.PUBLIC_URL + '/config/${hostname}.json';
+> const url = process.env.PUBLIC_URL + "/config/${hostname}.json";
 > ```
 
 ## Unflat keys

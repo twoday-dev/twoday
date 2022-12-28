@@ -1,9 +1,9 @@
-import { Link } from '@remix-run/react';
-import christmasElfNameGenerator from '@twoday/christmas-elf-name-generator';
-import React, { useRef, useState } from 'react';
-import RubberBand from 'react-reveal/RubberBand';
+import { Link } from "@remix-run/react";
+import christmasElfNameGenerator from "@twoday/christmas-elf-name-generator";
+import React, { useRef, useState } from "react";
+import RubberBand from "react-reveal/RubberBand";
 
-export { meta } from '.';
+export { meta } from ".";
 
 export default function Generator() {
   const [elfName, setElfName] = useState<string>();

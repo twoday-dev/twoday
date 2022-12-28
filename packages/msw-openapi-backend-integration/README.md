@@ -10,9 +10,9 @@ Helper to integrate [Mock Service Worker](https://mswjs.io/) with [OpenAPI Backe
 2. Follow [Mock Service Worker instructions](https://mswjs.io/docs/getting-started/install). In place of `handlers.js`, in `src/mocks/browser.js` use:
 
 ```js
-import { setupWorker } from 'msw';
-import { handlers } from '@twoday/msw-openapi-backend-integration';
-import definition from '../petstore.json';
+import { setupWorker } from "msw";
+import { handlers } from "@twoday/msw-openapi-backend-integration";
+import definition from "../petstore.json";
 
 export const worker = setupWorker(...handlers({ definition }));
 ```

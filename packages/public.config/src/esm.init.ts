@@ -1,5 +1,5 @@
-import configs from './esm.configs.js';
-import createInit from './createInit.js';
+import configs from "./esm.configs.js";
+import createInit from "./createInit.js";
 
 const init = createInit(configs);
 

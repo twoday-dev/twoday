@@ -1,4 +1,4 @@
-import { useKeycloak } from '@react-keycloak/web';
+import { useKeycloak } from "@react-keycloak/web";
 import type {
   RealmAndResourceRolesType,
   RealmAndResourceRolesTypeType,
@@ -8,7 +8,7 @@ import type {
   RoleOrRoles,
   RoleOrRolesMaybe,
   Roles,
-} from './index.js';
+} from "./index.js";
 
 export default function useHasRole(
   realmAndResourceRoles: RealmAndResourceRolesTypeType
@@ -26,7 +26,7 @@ export default function useHasRole(
   const hasResource = (resource: Resource) =>
     resource
       ? hasResourceRole(
-          typeof resource === 'string'
+          typeof resource === "string"
             ? toResourceRoles([resource])
             : Array.isArray(resource)
             ? toResourceRoles(resource)
@@ -44,7 +44,7 @@ export default function useHasRole(
 
   return keycloak.authenticated && realmAndResourceRoles
     ? testRealmAndResourceRoles(
-        typeof realmAndResourceRoles === 'string'
+        typeof realmAndResourceRoles === "string"
           ? toRealmAndResourceRoles([realmAndResourceRoles])
           : Array.isArray(realmAndResourceRoles)
           ? toRealmAndResourceRoles(realmAndResourceRoles)

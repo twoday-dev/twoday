@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
-import clsx from 'clsx';
-import { deleteItem, putItem } from '../api';
-import { Components } from '../client';
+import { useEffect, useRef, useState } from "react";
+import clsx from "clsx";
+import { deleteItem, putItem } from "../api";
+import { Components } from "../client";
 
 type Props = { item: Components.Schemas.Item };
 
@@ -32,7 +32,7 @@ export default function Item({
 
   return (
     <li
-      className={clsx(completed && 'completed', isEditing && 'editing')}
+      className={clsx(completed && "completed", isEditing && "editing")}
       onDoubleClick={() => {
         setFocus(true);
         setIsEditing(true);
@@ -59,7 +59,7 @@ export default function Item({
         type="text"
         defaultValue={title}
         onKeyDown={({ key }) => {
-          if (key === 'Enter') {
+          if (key === "Enter") {
             handleSave();
           }
         }}

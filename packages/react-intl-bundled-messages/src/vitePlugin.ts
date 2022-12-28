@@ -1,11 +1,11 @@
-import '@twoday/public.config/config';
-import { createHash } from 'crypto';
-import fs from 'fs-extra';
-import * as path from 'node:path';
-import * as url from 'url';
-import type { Plugin } from 'vite';
-import { normalizePath } from 'vite';
-import target from './target.js';
+import "@twoday/public.config/config";
+import { createHash } from "crypto";
+import fs from "fs-extra";
+import * as path from "node:path";
+import * as url from "url";
+import type { Plugin } from "vite";
+import { normalizePath } from "vite";
+import target from "./target.js";
 
 const availableMessageFiles = fs.pathExistsSync(target)
   ? fs.readdirSync(target)
@@ -20,8 +20,8 @@ interface Options {
 }
 
 const mainPlugin = createPlugin(
-  '@twoday/vite-plugin-react-intl-bundled-messages',
-  'dynamic-import-messages',
+  "@twoday/vite-plugin-react-intl-bundled-messages",
+  "dynamic-import-messages",
   `export default {
 ${(globalThis.ENV?.LOCALES ?? [])
   .map((locale) => [locale, `${locale}.json`])
@@ -33,17 +33,17 @@ ${(globalThis.ENV?.LOCALES ?? [])
       )}/${fileName}"),
 `
   )
-  .join('')}}`
+  .join("")}}`
 );
 
 const noParserPlugin: Plugin = {
-  name: '@twoday/vite-plugin-icu-messageformat-no-parser',
+  name: "@twoday/vite-plugin-icu-messageformat-no-parser",
   config: (_config, { mode }) => ({
     resolve: {
       alias: {
-        ...(mode === 'production' && {
-          '@formatjs/icu-messageformat-parser':
-            '@formatjs/icu-messageformat-parser/no-parser',
+        ...(mode === "production" && {
+          "@formatjs/icu-messageformat-parser":
+            "@formatjs/icu-messageformat-parser/no-parser",
         }),
       },
     },
@@ -60,12 +60,12 @@ export default reactIntlBundledMessagesPlugin;
 
 function createPlugin(name: string, aliasPath: string, data: string): Plugin {
   function getHashDigest(content: string) {
-    const hasher = createHash('sha256');
+    const hasher = createHash("sha256");
     hasher.update(content);
-    return hasher.digest('hex').slice(0, 10);
+    return hasher.digest("hex").slice(0, 10);
   }
 
-  const tempDir = './.temp';
+  const tempDir = "./.temp";
   const fileURL = new URL(
     `${tempDir}/${getHashDigest(data)}.js`,
     import.meta.url

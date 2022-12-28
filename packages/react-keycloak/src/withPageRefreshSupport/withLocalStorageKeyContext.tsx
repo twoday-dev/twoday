@@ -1,5 +1,5 @@
-import React, { createContext, useContext } from 'react';
-import type { Props, Provider } from '../index.js';
+import React, { createContext, useContext } from "react";
+import type { Props, Provider } from "../index.js";
 
 export interface PropsWithLocalStorageKey extends Props {
   localStorageKey?: string;
@@ -12,7 +12,7 @@ export const useLocalStorageKey = () => useContext(Context);
 
 export default function withLocalStorageKeyContext(Provider: Provider) {
   return function ReactKeycloakProvider(props: PropsWithLocalStorageKey) {
-    const { localStorageKey = 'keycloak_tokens', ...other } = props;
+    const { localStorageKey = "keycloak_tokens", ...other } = props;
 
     return (
       <Context.Provider value={localStorageKey}>

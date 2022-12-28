@@ -1,8 +1,8 @@
-import { reactKeycloakWebContext } from '@react-keycloak/web/lib/context';
-import type Keycloak from 'keycloak-js';
-import type { KeycloakLogoutOptions } from 'keycloak-js';
-import React, { useEffect, useReducer, useState } from 'react';
-import type { Props, Provider } from './index.js';
+import { reactKeycloakWebContext } from "@react-keycloak/web/lib/context";
+import type Keycloak from "keycloak-js";
+import type { KeycloakLogoutOptions } from "keycloak-js";
+import React, { useEffect, useReducer, useState } from "react";
+import type { Props, Provider } from "./index.js";
 
 const ContextProvider = reactKeycloakWebContext.Provider;
 
@@ -25,7 +25,7 @@ export default globalThis.ENV?.KEYCLOAK_MOCK_USER
         onTokens,
       }: {
         user: MockUser;
-        onTokens: Props['onTokens'];
+        onTokens: Props["onTokens"];
       }) {
         const [, forceUpdate] = useReducer((x) => x + 1, 0);
         const [authenticated, setAuthenticated] = useState(false);
@@ -38,8 +38,8 @@ export default globalThis.ENV?.KEYCLOAK_MOCK_USER
             onTokens!({
               token:
                 mockUser.__tokens?.token ??
-                'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c',
-              refreshToken: mockUser.__tokens?.refreshToken ?? '<refreshToken>',
+                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+              refreshToken: mockUser.__tokens?.refreshToken ?? "<refreshToken>",
             });
             forceUpdate();
           },

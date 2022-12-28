@@ -1,17 +1,17 @@
-import path from 'path';
-import getCSSModuleLocalIdent from 'react-dev-utils/getCSSModuleLocalIdent.js';
-import nodeExternals from 'webpack-node-externals';
+import path from "path";
+import getCSSModuleLocalIdent from "react-dev-utils/getCSSModuleLocalIdent.js";
+import nodeExternals from "webpack-node-externals";
 
 export default {
-  entry: ['regenerator-runtime/runtime', './src/server.js'],
+  entry: ["regenerator-runtime/runtime", "./src/server.js"],
 
-  target: 'node',
+  target: "node",
 
   externals: [nodeExternals()],
 
   output: {
-    path: path.resolve('build/.server'),
-    filename: 'index.js',
+    path: path.resolve("build/.server"),
+    filename: "index.js",
   },
 
   module: {
@@ -19,9 +19,9 @@ export default {
       {
         test: /\.js$/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/env', '@babel/react'],
+            presets: ["@babel/env", "@babel/react"],
           },
         },
       },
@@ -30,7 +30,7 @@ export default {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'ts-loader',
+          loader: "ts-loader",
           options: {
             compilerOptions: {
               noEmit: false,
@@ -42,7 +42,7 @@ export default {
       {
         test: /\.module\.css$/,
         use: {
-          loader: 'css-loader',
+          loader: "css-loader",
           options: {
             modules: {
               getLocalIdent: getCSSModuleLocalIdent,
@@ -55,6 +55,6 @@ export default {
   },
 
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: [".tsx", ".ts", ".js"],
   },
 };

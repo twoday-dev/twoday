@@ -5,7 +5,7 @@ With this high-level neural network -assisted [Christmas Elf Name Generator](htt
 ## Usage
 
 ```js
-import christmasElfNameGenerator from '@twoday/christmas-elf-name-generator';
+import christmasElfNameGenerator from "@twoday/christmas-elf-name-generator";
 
-christmasElfNameGenerator('Rory'); // => "Rory Elf"
+christmasElfNameGenerator("Rory"); // => "Rory Elf"
 ```

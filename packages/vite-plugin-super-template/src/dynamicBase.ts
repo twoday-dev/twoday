@@ -1,12 +1,12 @@
-import '@twoday/public.config/config';
-import { Plugin } from 'vite';
-import { dynamicBase as vitePluginDynamicBase } from 'vite-plugin-dynamic-base';
+import "@twoday/public.config/config";
+import { Plugin } from "vite";
+import { dynamicBase as vitePluginDynamicBase } from "vite-plugin-dynamic-base";
 
 const dynamicBase: Plugin[] = [
   {
-    name: '@twoday/vite-plugin-dynamic-base',
+    name: "@twoday/vite-plugin-dynamic-base",
     config: () => ({
-      base: process.env.NODE_ENV === 'production' ? '/__dynamic_base__/' : '/',
+      base: process.env.NODE_ENV === "production" ? "/__dynamic_base__/" : "/",
     }),
   },
   vitePluginDynamicBase({

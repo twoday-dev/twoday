@@ -1,9 +1,9 @@
-import renderChildrenOrFallback from '@postinumero/react-auth/lib/renderChildrenOrFallback.js';
-import { useKeycloak } from '@react-keycloak/web';
-import type { RoleOrRolesMaybe } from './index.js';
-import useHasRole from './useHasRole.js';
+import renderChildrenOrFallback from "@postinumero/react-auth/lib/renderChildrenOrFallback.js";
+import { useKeycloak } from "@react-keycloak/web";
+import type { RoleOrRolesMaybe } from "./index.js";
+import useHasRole from "./useHasRole.js";
 
-const reservedPropNames = ['fallback', 'children', 'realm', 'resource'];
+const reservedPropNames = ["fallback", "children", "realm", "resource"];
 
 export default renderChildrenOrFallback(
   useHasRole,
@@ -22,7 +22,7 @@ export default renderChildrenOrFallback(
 
     const toArray = (value: RoleOrRolesMaybe, getUnknown: () => any) =>
       value
-        ? typeof value === 'string'
+        ? typeof value === "string"
           ? [value, ...propRoles]
           : Array.isArray(value)
           ? [...value, propRoles]

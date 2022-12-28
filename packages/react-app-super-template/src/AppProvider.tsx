@@ -1,13 +1,13 @@
-import { clientPromise } from '@/api';
-import definition from '@/api/schema.json';
-import { IntlProvider } from '@twoday/react-intl-bundled-messages';
-import { ReactKeycloakProvider } from '@twoday/react-keycloak';
-import type Keycloak from 'keycloak-js';
-import type { OpenAPIV3 } from 'openapi-types';
-import React, { Suspense } from 'react';
-import keycloak from './keycloak.js';
-import SetDocumentLang from './SetDocumentLang';
-import useSetBackendBaseURL from './useSetBackendBaseURL.js';
+import { clientPromise } from "@/api";
+import definition from "@/api/schema.json";
+import { IntlProvider } from "@twoday/react-intl-bundled-messages";
+import { ReactKeycloakProvider } from "@twoday/react-keycloak";
+import type Keycloak from "keycloak-js";
+import type { OpenAPIV3 } from "openapi-types";
+import React, { Suspense } from "react";
+import keycloak from "./keycloak.js";
+import SetDocumentLang from "./SetDocumentLang";
+import useSetBackendBaseURL from "./useSetBackendBaseURL.js";
 
 type ReactKeycloakProvider = React.ComponentProps<typeof ReactKeycloakProvider>;
 

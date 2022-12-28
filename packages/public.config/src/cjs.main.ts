@@ -1,3 +1,3 @@
-import init from './cjs.init.js';
+import init from "./cjs.init.js";
 
 init();

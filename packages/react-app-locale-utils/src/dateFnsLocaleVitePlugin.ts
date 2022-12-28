@@ -1,19 +1,19 @@
-import '@twoday/public.config/config';
-import { createHash } from 'crypto';
-import fg from 'fast-glob';
-import fs from 'fs-extra';
-import { createRequire } from 'node:module';
-import * as path from 'node:path';
-import * as url from 'url';
-import type { Plugin } from 'vite';
-import { normalizePath } from 'vite';
+import "@twoday/public.config/config";
+import { createHash } from "crypto";
+import fg from "fast-glob";
+import fs from "fs-extra";
+import { createRequire } from "node:module";
+import * as path from "node:path";
+import * as url from "url";
+import type { Plugin } from "vite";
+import { normalizePath } from "vite";
 
 const require = createRequire(import.meta.url);
 
 function getAvailableLocales() {
   try {
     const localeDir = normalizePath(
-      path.dirname(require.resolve('date-fns/locale'))
+      path.dirname(require.resolve("date-fns/locale"))
     );
     return fg
       .sync(`${localeDir}/*`, { onlyDirectories: true })
@@ -29,10 +29,10 @@ const fallback = globalThis.ENV?.LOCALES?.[0];
 
 const dateFnsLocales = (globalThis.ENV?.LOCALES ?? []).map((locale) => {
   const primary = locale;
-  const [lang] = locale.split('-');
+  const [lang] = locale.split("-");
   const secondary = lang;
   const primaryFallback = fallback;
-  const [langFallback] = primaryFallback?.split('-') ?? [];
+  const [langFallback] = primaryFallback?.split("-") ?? [];
   const secondaryFallback = langFallback;
 
   const dateFnsLocale = [primary, secondary, primaryFallback, secondaryFallback]
@@ -43,8 +43,8 @@ const dateFnsLocales = (globalThis.ENV?.LOCALES ?? []).map((locale) => {
 });
 
 const dateFnsLocaleVitePlugin = createPlugin(
-  '@twoday/vite-plugin-date-fns-locale',
-  'dynamic-import-date-fns-locales',
+  "@twoday/vite-plugin-date-fns-locale",
+  "dynamic-import-date-fns-locales",
   `export default {
   ${dateFnsLocales
     .map(
@@ -52,19 +52,19 @@ const dateFnsLocaleVitePlugin = createPlugin(
         `  "${locale}": () => import("date-fns/locale/${dateFnsLocale}"),
   `
     )
-    .join('')}}`
+    .join("")}}`
 );
 
 export default dateFnsLocaleVitePlugin;
 
 function createPlugin(name: string, aliasPath: string, data: string): Plugin {
   function getHashDigest(content: string) {
-    const hasher = createHash('sha256');
+    const hasher = createHash("sha256");
     hasher.update(content);
-    return hasher.digest('hex').slice(0, 10);
+    return hasher.digest("hex").slice(0, 10);
   }
 
-  const tempDir = './.temp';
+  const tempDir = "./.temp";
   const fileURL = new URL(
     `${tempDir}/${getHashDigest(data)}.js`,
     import.meta.url

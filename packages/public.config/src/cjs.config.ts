@@ -1,4 +1,4 @@
-import './config.js';
-import init from './cjs.init.js';
+import "./config.js";
+import init from "./cjs.init.js";
 
 init();

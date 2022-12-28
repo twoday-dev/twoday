@@ -1,20 +1,20 @@
-import NodeGlobalsPolyfillPlugin from '@esbuild-plugins/node-globals-polyfill';
-import NodeModulesPolyfillPlugin from '@esbuild-plugins/node-modules-polyfill';
-import rollupNodePolyFill from 'rollup-plugin-node-polyfills';
-import { Plugin } from 'vite';
-import defaultExport from './defaultExport.js';
+import NodeGlobalsPolyfillPlugin from "@esbuild-plugins/node-globals-polyfill";
+import NodeModulesPolyfillPlugin from "@esbuild-plugins/node-modules-polyfill";
+import rollupNodePolyFill from "rollup-plugin-node-polyfills";
+import { Plugin } from "vite";
+import defaultExport from "./defaultExport.js";
 
 const craLikePlugin: Plugin = {
-  name: '@twoday/vite-plugin-super-template-cra-like',
+  name: "@twoday/vite-plugin-super-template-cra-like",
   config: (_config, { mode }) => ({
     server: {
       port: 3000,
     },
     define: {
-      'process.env': {},
-      'process.platform': 'undefined',
-      'process.browser': 'true',
-      global: 'globalThis',
+      "process.env": {},
+      "process.platform": "undefined",
+      "process.browser": "true",
+      global: "globalThis",
     },
     optimizeDeps: {
       // For openapi-client-axios
@@ -24,7 +24,7 @@ const craLikePlugin: Plugin = {
             process: true,
             buffer: true,
           }) as any, // any, because it was not possible to fully dedupe esbuild dependency,
-          mode === 'production' && defaultExport(NodeModulesPolyfillPlugin)(),
+          mode === "production" && defaultExport(NodeModulesPolyfillPlugin)(),
         ].filter(Boolean),
       },
     },

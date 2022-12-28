@@ -14,10 +14,10 @@ VITE_LOCALES=["da-DK","en-US","es-ES","fi-FI","lt-LT","lv-LV","nb-NO","nl-NL","r
 ### `useLocale`
 
 ```js
-import useLocale from '@twoday/react-app-locale-utils/lib/useLocale.js';
+import useLocale from "@twoday/react-app-locale-utils/lib/useLocale.js";
 
 const [locale, setLocale] = useLocale();
-const [lang] = locale.split('-');
+const [lang] = locale.split("-");
 ```
 
 ### `useDateFnsLocale`
@@ -25,8 +25,8 @@ const [lang] = locale.split('-');
 Requires use of `dateFnsLocaleVitePlugin` from `@twoday/react-app-locale-utils/lib/dateFnsLocaleVitePlugin.js`.
 
 ```js
-import { formatRelative, subDays } from 'date-fns';
-import useDateFnsLocale from '@twoday/react-app-locale-utils/lib/useDateFnsLocale.js';
+import { formatRelative, subDays } from "date-fns";
+import useDateFnsLocale from "@twoday/react-app-locale-utils/lib/useDateFnsLocale.js";
 
 const locale = useDateFnsLocale();
 formatRelative(subDays(new Date(), 3), new Date(), { locale });
@@ -36,14 +36,14 @@ formatRelative(subDays(new Date(), 3), new Date(), { locale });
 ### `useMUILocale` (`useMaterialUILocale` for `@material-ui/core@4`)
 
 ```js
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import useMUILocale from '@twoday/react-app-locale-utils/lib/useMUILocale.js';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import useMUILocale from "@twoday/react-app-locale-utils/lib/useMUILocale.js";
 
 const locale = useMUILocale();
 const theme = createTheme(
   {
     palette: {
-      primary: { main: '#1976d2' },
+      primary: { main: "#1976d2" },
     },
   },
   locale
@@ -57,7 +57,7 @@ const theme = createTheme(
 ### `useDisplayName`
 
 ```js
-import useDisplayName from '@twoday/react-app-locale-utils/lib/useDisplayName.js';
+import useDisplayName from "@twoday/react-app-locale-utils/lib/useDisplayName.js";
 
 const displayName = useDisplayName();
 //=> "suomi"
@@ -66,7 +66,7 @@ const displayName = useDisplayName();
 ### `displayNames`
 
 ```js
-import displayNames from '@twoday/react-app-locale-utils/lib/displayNames.js';
+import displayNames from "@twoday/react-app-locale-utils/lib/displayNames.js";
 
 displayNames;
 //=> [{"locale":"da-DK","value":"dansk"},{"locale":"en-US","value":"English"},...]
@@ -75,7 +75,7 @@ displayNames;
 ### `defaultLocale`
 
 ```js
-import defaultLocale from '@twoday/react-app-locale-utils/lib/defaultLocale.js';
+import defaultLocale from "@twoday/react-app-locale-utils/lib/defaultLocale.js";
 
 defaultLocale;
 //=> "da-DK"
@@ -84,7 +84,7 @@ defaultLocale;
 ### `locales`
 
 ```js
-import locales from '@twoday/react-app-locale-utils/lib/locales.js';
+import locales from "@twoday/react-app-locale-utils/lib/locales.js";
 
 locales;
 //=> ["da-DK","en-US","es-ES","fi-FI","lt-LT","lv-LV","nb-NO","nl-NL","ro-RO","sv-SE","en-XA"]

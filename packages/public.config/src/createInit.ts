@@ -1,5 +1,5 @@
-import * as merge from 'deepmerge-json';
-import { set } from 'lodash-es';
+import * as merge from "deepmerge-json";
+import { set } from "lodash-es";
 
 const objectMap = <FromValue, ToValue>(
   obj: { [key: string]: FromValue },
@@ -22,7 +22,7 @@ export interface Options {
 }
 
 export const defaultOptions = {
-  prefix: ['REACT_APP_', 'VITE_'],
+  prefix: ["REACT_APP_", "VITE_"],
   config: [],
 };
 
@@ -39,7 +39,7 @@ const overrides = ([
 const toConfigByHostname = (config: ConfigOption): ConfigByHostname =>
   Array.isArray(config)
     ? (config as ConfigByHostname)
-    : [globalThis.location?.hostname ?? '', config];
+    : [globalThis.location?.hostname ?? "", config];
 
 const hostnameSafe = (hostname: Hostname) => `.${hostname}`;
 
@@ -79,7 +79,7 @@ const jsonParseSafe = ([
   }),
 ];
 
-const currentHostnameSafe = hostnameSafe(globalThis.location?.hostname ?? '');
+const currentHostnameSafe = hostnameSafe(globalThis.location?.hostname ?? "");
 
 const unflat = (config: Config) =>
   Object.entries(config).reduce(
@@ -110,7 +110,7 @@ export default function createInit(configs: ConfigOption[]) {
       .map(unflat)
       .reduce(
         (config, overrides) =>
-          (typeof merge === 'function' ? merge : merge.default)(
+          (typeof merge === "function" ? merge : merge.default)(
             config,
             overrides
           ),

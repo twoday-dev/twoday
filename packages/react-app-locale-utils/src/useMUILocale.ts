@@ -1,5 +1,5 @@
-import * as muiLocales from '@mui/material/locale/index.js';
-import useLocale from './useLocale.js';
+import * as muiLocales from "@mui/material/locale/index.js";
+import useLocale from "./useLocale.js";
 
 type MUILocalesIndexType = {
   [k: string]: typeof muiLocales[keyof typeof muiLocales];
@@ -7,9 +7,9 @@ type MUILocalesIndexType = {
 
 export default function useMUILocale() {
   const [locale] = useLocale();
-  const [lang] = locale.split('-');
+  const [lang] = locale.split("-");
 
-  const muiLocaleKey = locale.replace('-', '');
+  const muiLocaleKey = locale.replace("-", "");
 
   let muiLocale = (muiLocales as MUILocalesIndexType)[muiLocaleKey];
 

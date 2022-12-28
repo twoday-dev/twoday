@@ -7,7 +7,7 @@ Keycloak helper components, hooks, etc.
 ### `useCurrentUser`
 
 ```js
-import { useCurrentUser } from '@twoday/react-keycloak';
+import { useCurrentUser } from "@twoday/react-keycloak";
 
 const user = useCurrentUser();
 ```
@@ -17,7 +17,7 @@ const user = useCurrentUser();
 `fallback` and `children` props are optional.
 
 ```js
-import { HasRole } from '@twoday/react-keycloak';
+import { HasRole } from "@twoday/react-keycloak";
 
 <HasRole realm="admin" fallback={<Unauthorized />}>
   <AdminPanel />
@@ -25,11 +25,11 @@ import { HasRole } from '@twoday/react-keycloak';
 ```
 
 ```js
-<HasRole realm={['foo', 'bar']}>...</HasRole>
+<HasRole realm={["foo", "bar"]}>...</HasRole>
 ```
 
 ```js
-<HasRole resource={{ 'my-app': 'editor' }} /* fallback={<Unauthorized />} */>
+<HasRole resource={{ "my-app": "editor" }} /* fallback={<Unauthorized />} */>
   <EditButton />
 </HasRole>
 ```
@@ -47,7 +47,7 @@ Shorthand to check for realm and current `clientId` resource roles:
 `fallback` and `children` props are optional.
 
 ```js
-import { IsAuthenticated } from '@twoday/react-keycloak';
+import { IsAuthenticated } from "@twoday/react-keycloak";
 
 <IsAuthenticated fallback={<Public />}>
   <Private />
@@ -57,38 +57,38 @@ import { IsAuthenticated } from '@twoday/react-keycloak';
 ### `useHasRole`
 
 ```js
-import { useHasRole } from '@twoday/react-keycloak';
+import { useHasRole } from "@twoday/react-keycloak";
 
-const isAdmin = useHasRole({ realm: 'admin' });
+const isAdmin = useHasRole({ realm: "admin" });
 ```
 
 ```js
-const isFooOrBar = useHasRole({ realm: ['foo', 'bar'] });
+const isFooOrBar = useHasRole({ realm: ["foo", "bar"] });
 ```
 
 ```js
-const useIsAdmin = () => useHasRole({ realm: 'admin' });
+const useIsAdmin = () => useHasRole({ realm: "admin" });
 ```
 
 ```js
-const isEditor = useHasRole({ resource: { 'my-app': 'editor' } });
+const isEditor = useHasRole({ resource: { "my-app": "editor" } });
 ```
 
 ```js
-const useIsEditor = () => useHasRole({ resource: { 'my-app': 'editor' } });
+const useIsEditor = () => useHasRole({ resource: { "my-app": "editor" } });
 ```
 
 Shorthand to check for realm and current `clientId` resource roles:
 
 ```js
-const isAdmin = useHasRole('admin');
-const isFooOrBar = useHasRole(['foo', 'bar']);
+const isAdmin = useHasRole("admin");
+const isFooOrBar = useHasRole(["foo", "bar"]);
 ```
 
 ### `useIsAuthenticated`
 
 ```js
-import { useIsAuthenticated } from '@twoday/react-keycloak';
+import { useIsAuthenticated } from "@twoday/react-keycloak";
 
 const isAuthenticated = useIsAuthenticated();
 ```
@@ -102,8 +102,8 @@ const isAuthenticated = useIsAuthenticated();
 Stores `token` and `refreshToken` in `localStorage`. Authentication is shared live between browser tabs.
 
 ```js
-import { withPageRefreshSupport } from '@twoday/react-keycloak';
-import { ReactKeycloakProvider as Provider } from '@react-keycloak/web';
+import { withPageRefreshSupport } from "@twoday/react-keycloak";
+import { ReactKeycloakProvider as Provider } from "@react-keycloak/web";
 
 const ReactKeycloakProvider = withPageRefreshSupport(Provider);
 ```
@@ -111,7 +111,7 @@ const ReactKeycloakProvider = withPageRefreshSupport(Provider);
 On logout, use `useKeycloak` from `@twoday/react-keycloak`, to sync logout with other tabs:
 
 ```js
-import { useKeycloak } from '@twoday/react-keycloak';
+import { useKeycloak } from "@twoday/react-keycloak";
 
 const { keycloak } = useKeycloak();
 
@@ -129,9 +129,9 @@ const { keycloak } = useKeycloak();
 Updates `Authorization: Bearer <token>` in given axios instance.
 
 ```js
-import { withAxiosAuthorizationHeaderUpdater } from '@twoday/react-keycloak';
-import { ReactKeycloakProvider as Provider } from '@react-keycloak/web';
-import axios from 'axios';
+import { withAxiosAuthorizationHeaderUpdater } from "@twoday/react-keycloak";
+import { ReactKeycloakProvider as Provider } from "@react-keycloak/web";
+import axios from "axios";
 
 const ReactKeycloakProvider = withAxiosAuthorizationHeaderUpdater(Provider);
 

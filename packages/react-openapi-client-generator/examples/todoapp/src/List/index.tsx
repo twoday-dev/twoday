@@ -1,6 +1,6 @@
-import { useRouteMatch } from 'react-router-dom';
-import { useItems } from '../api';
-import Item from './Item';
+import { useRouteMatch } from "react-router-dom";
+import { useItems } from "../api";
+import Item from "./Item";
 
 export interface MatchParams {
   filter: string;
@@ -9,13 +9,13 @@ export interface MatchParams {
 export default function List() {
   const {
     params: { filter },
-  } = useRouteMatch<MatchParams>('/:filter?') ?? { params: {} };
+  } = useRouteMatch<MatchParams>("/:filter?") ?? { params: {} };
 
   const items = useItems();
 
   const listItems = filter
     ? items.filter(
-        ({ completed }) => Boolean(completed) === (filter === 'completed')
+        ({ completed }) => Boolean(completed) === (filter === "completed")
       )
     : items;
 

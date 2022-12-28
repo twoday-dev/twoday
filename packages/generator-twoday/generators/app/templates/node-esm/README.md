@@ -3,7 +3,7 @@
 ## Example
 
 ```js
-import <%= variableName %> from '<%= name %>';
+import <%= variableName %> from "<%= name %>";
 
 <%= variableName %>();
 ```

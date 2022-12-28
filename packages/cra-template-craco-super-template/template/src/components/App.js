@@ -1,8 +1,8 @@
-import AppProvider from '@twoday/react-app-super-template';
-import { FormattedMessage, useIntl } from 'react-intl';
-import logo from '../logo.svg';
-import './App.css';
-import Info from './Info';
+import AppProvider from "@twoday/react-app-super-template";
+import { FormattedMessage, useIntl } from "react-intl";
+import logo from "../logo.svg";
+import "./App.css";
+import Info from "./Info";
 
 export default function App() {
   return (
@@ -42,7 +42,7 @@ function Image() {
     <img
       src={logo}
       className="App-logo"
-      alt={intl.formatMessage({ defaultMessage: 'logo' })}
+      alt={intl.formatMessage({ defaultMessage: "logo" })}
     />
   );
 }

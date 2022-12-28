@@ -1,6 +1,6 @@
-import * as client from './client';
+import * as client from "./client";
 
-export * from './client';
+export * from "./client";
 
 export async function postItem(item) {
   await client.postItem(null, item);

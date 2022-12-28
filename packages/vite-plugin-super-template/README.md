@@ -7,8 +7,8 @@
 `vite.config.js`:
 
 ```js
-import superTemplate from '@twoday/vite-plugin-super-template';
-import { defineConfig } from 'vite';
+import superTemplate from "@twoday/vite-plugin-super-template";
+import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [superTemplate()],
@@ -24,18 +24,18 @@ Default options can be tweaked or replaced entirely.
 ```js
 import superTemplate, {
   defaultOptions,
-} from '@twoday/vite-plugin-super-template';
-import { defineConfig } from 'vite';
+} from "@twoday/vite-plugin-super-template";
+import { defineConfig } from "vite";
 
 const withOriginalFormatJSBabelPlugin = (options) => {
   const { plugins, presets } = options.react.babel;
 
   const indexOftwodayFormatJSPreset = presets.findIndex(
-    (preset) => preset === '@twoday/formatjs'
+    (preset) => preset === "@twoday/formatjs"
   );
 
   presets.splice(indexOftwodayFormatJSPreset, 1);
-  plugins.push('formatjs');
+  plugins.push("formatjs");
 
   return options;
 };

@@ -1,1 +1,1 @@
-export { default } from './<%= classOrComponentName %>.js';
+export { default } from "./<%= classOrComponentName %>.js";

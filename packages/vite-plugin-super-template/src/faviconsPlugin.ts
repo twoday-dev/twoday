@@ -1,6 +1,6 @@
-import { config } from 'favicons';
-import fs from 'fs-extra';
-import vitePluginFaviconsInject from 'vite-plugin-favicons-inject';
+import { config } from "favicons";
+import fs from "fs-extra";
+import vitePluginFaviconsInject from "vite-plugin-favicons-inject";
 
 interface Options {
   source?: string;
@@ -8,7 +8,7 @@ interface Options {
 }
 
 export const defaultOptions = {
-  source: 'src/images/icon.png',
+  source: "src/images/icon.png",
   config: {
     icons: {
       android: false,

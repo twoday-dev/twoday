@@ -1,5 +1,5 @@
-import displayNames from './displayNames.js';
-import useLocale from './useLocale.js';
+import displayNames from "./displayNames.js";
+import useLocale from "./useLocale.js";
 
 export default function useDisplayName() {
   const [locale] = useLocale();

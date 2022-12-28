@@ -1,13 +1,13 @@
-import { RequestLogicHandlers } from '@twoday/msw-openapi-backend-integration';
-import type { Components } from '../client';
+import { RequestLogicHandlers } from "@twoday/msw-openapi-backend-integration";
+import type { Components } from "../client";
 
-export const definition = require('../TodoMVC-API.json');
+export const definition = require("../TodoMVC-API.json");
 
 let id = 0;
 
 const items: Components.Schemas.Items =
-  definition.paths['/items'].get.responses['200'].content['application/json']
-    .examples['example-1'].value;
+  definition.paths["/items"].get.responses["200"].content["application/json"]
+    .examples["example-1"].value;
 
 const requestLogicHandlers: RequestLogicHandlers = {
   postItem(request) {

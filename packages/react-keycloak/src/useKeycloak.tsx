@@ -1,7 +1,7 @@
-import { useKeycloak as useReactKeycloak } from '@react-keycloak/web';
-import { produce } from 'immer';
-import type { KeycloakPromise } from 'keycloak-js';
-import { useLocalStorageKey } from './withPageRefreshSupport/withLocalStorageKeyContext.js';
+import { useKeycloak as useReactKeycloak } from "@react-keycloak/web";
+import { produce } from "immer";
+import type { KeycloakPromise } from "keycloak-js";
+import { useLocalStorageKey } from "./withPageRefreshSupport/withLocalStorageKeyContext.js";
 
 export default function useKeycloak() {
   const current = useReactKeycloak();

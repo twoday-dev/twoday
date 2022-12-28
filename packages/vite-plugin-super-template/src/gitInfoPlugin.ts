@@ -1,19 +1,19 @@
-import { Plugin } from 'vite';
+import { Plugin } from "vite";
 
-import { execSync } from 'child_process';
+import { execSync } from "child_process";
 
 function git(command: string) {
   return JSON.stringify(
-    execSync(`git ${command}`, { encoding: 'utf8' }).trim()
+    execSync(`git ${command}`, { encoding: "utf8" }).trim()
   );
 }
 
 const gitInfoPlugin: Plugin = {
-  name: '@twoday/vite-plugin-super-template-git-info',
+  name: "@twoday/vite-plugin-super-template-git-info",
   config: () => ({
     define: {
-      'ENV.GIT_VERSION': git('describe --always'),
-      'ENV.GIT_AUTHOR_DATE': git('log -1 --format=%aI'),
+      "ENV.GIT_VERSION": git("describe --always"),
+      "ENV.GIT_AUTHOR_DATE": git("log -1 --format=%aI"),
     },
   }),
 };

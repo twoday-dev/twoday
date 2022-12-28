@@ -1,4 +1,4 @@
-import type { ParsedRequest, Options } from 'openapi-backend';
+import type { Options, ParsedRequest } from "openapi-backend";
 
 export interface RequestLogicHandlers {
   [key: string]: (reguest: ParsedRequest) => void;

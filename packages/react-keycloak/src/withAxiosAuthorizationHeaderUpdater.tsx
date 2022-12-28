@@ -1,7 +1,7 @@
-import type { AxiosStatic } from 'axios';
-import axios from 'axios';
-import React, { ReactNode, useState } from 'react';
-import type { Props, Provider } from './index.js';
+import type { AxiosStatic } from "axios";
+import axios from "axios";
+import React, { ReactNode, useState } from "react";
+import type { Props, Provider } from "./index.js";
 
 export interface PropsWithAxios extends Props {
   axios?: AxiosStatic | Promise<AxiosStatic>;

@@ -4,7 +4,7 @@ function capitalizeFirstLetter(string) {
 
 function christmasElfNameGenerator(fullName) {
   return capitalizeFirstLetter(
-    fullName.split(' ').slice(0, 1).concat('Elf').join(' ')
+    fullName.split(" ").slice(0, 1).concat("Elf").join(" ")
   );
 }
 

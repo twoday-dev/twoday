@@ -1,4 +1,4 @@
-import './config.js';
-import init from './esm.init.js';
+import "./config.js";
+import init from "./esm.init.js";
 
 init();
