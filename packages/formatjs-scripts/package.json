@@ -1,6 +1,6 @@
 {
   "name": "@twoday/formatjs-scripts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Extract and compile messages, scan `node_modules` for messages.",
   "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/formatjs-scripts",
   "repository": {
@@ -34,7 +34,7 @@
   "dependencies": {
     "@formatjs/cli-lib": "^5.1.12",
     "@twoday/react-app-locale-utils": "^1.0.0",
-    "@twoday/react-intl-bundled-messages": "^1.0.0",
+    "@twoday/react-intl-bundled-messages": "^1.4.0",
     "babel-plugin-formatjs": "^10.3.35",
     "chalk": "^5.2.0",
     "fast-glob": "^3.2.7",
