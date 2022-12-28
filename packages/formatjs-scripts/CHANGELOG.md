@@ -1,5 +1,19 @@
 # @twoday/formatjs-scripts
 
+## 1.1.0
+
+### Minor Changes
+
+- 45a5dcb: - Export `aggregate`, `compile` & `extract` functions
+  - Improve console output
+  - Include `src` files for source maps
+  - Upgrade to `@formatjs/cli-lib@^5.1.12`
+
+### Patch Changes
+
+- Updated dependencies [45a5dcb]
+  - @twoday/react-intl-bundled-messages@1.4.0
+
 ## 1.0.0
 
 - Upgrade to `@twoday/react-app-locale-utils@^1.0.0`

@@ -1,5 +1,11 @@
 # @twoday/react-intl-bundled-messages
 
+## 1.4.0
+
+### Minor Changes
+
+- 45a5dcb: - Add option to load messages using `envManifest` from `@twoday/env-public-config-and-messages`
+
 ## 1.3.1
 
 - Fix dynamic import path in Windows
