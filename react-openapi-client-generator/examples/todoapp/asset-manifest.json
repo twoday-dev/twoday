@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/twoday/react-openapi-client-generator/examples/todoapp/static/css/main.e1b2a040.chunk.css",
-    "main.js": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/main.2e8f48f6.chunk.js",
-    "main.js.map": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/main.2e8f48f6.chunk.js.map",
-    "runtime-main.js": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/runtime-main.a706574d.js",
-    "runtime-main.js.map": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/runtime-main.a706574d.js.map",
+    "main.js": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/main.189830f9.chunk.js",
+    "main.js.map": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/main.189830f9.chunk.js.map",
+    "runtime-main.js": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/runtime-main.b11adc15.js",
+    "runtime-main.js.map": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/runtime-main.b11adc15.js.map",
     "static/css/2.a822724b.chunk.css": "/twoday/react-openapi-client-generator/examples/todoapp/static/css/2.a822724b.chunk.css",
     "static/js/2.c6f8eb50.chunk.js": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/2.c6f8eb50.chunk.js",
     "static/js/2.c6f8eb50.chunk.js.map": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/2.c6f8eb50.chunk.js.map",
     "static/js/3.2f4e3020.chunk.js": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/3.2f4e3020.chunk.js",
     "static/js/3.2f4e3020.chunk.js.map": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/3.2f4e3020.chunk.js.map",
-    "static/js/4.5c8cfb6f.chunk.js": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/4.5c8cfb6f.chunk.js",
-    "static/js/4.5c8cfb6f.chunk.js.map": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/4.5c8cfb6f.chunk.js.map",
+    "static/js/4.5c7adb28.chunk.js": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/4.5c7adb28.chunk.js",
+    "static/js/4.5c7adb28.chunk.js.map": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/4.5c7adb28.chunk.js.map",
     "index.html": "/twoday/react-openapi-client-generator/examples/todoapp/index.html",
     "static/css/2.a822724b.chunk.css.map": "/twoday/react-openapi-client-generator/examples/todoapp/static/css/2.a822724b.chunk.css.map",
     "static/css/main.e1b2a040.chunk.css.map": "/twoday/react-openapi-client-generator/examples/todoapp/static/css/main.e1b2a040.chunk.css.map",
@@ -19,10 +19,10 @@
     "static/js/3.2f4e3020.chunk.js.LICENSE.txt": "/twoday/react-openapi-client-generator/examples/todoapp/static/js/3.2f4e3020.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a706574d.js",
+    "static/js/runtime-main.b11adc15.js",
     "static/css/2.a822724b.chunk.css",
     "static/js/2.c6f8eb50.chunk.js",
     "static/css/main.e1b2a040.chunk.css",
-    "static/js/main.2e8f48f6.chunk.js"
+    "static/js/main.189830f9.chunk.js"
   ]
 }
