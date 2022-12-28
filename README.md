@@ -21,6 +21,7 @@ Contributions are welcome!
 ### Tools
 
 - [@twoday/christmas-elf-name-generator](/packages/christmas-elf-name-generator) – With this high-level neural network -assisted [Christmas Elf Name Generator](https://twoday-dev.github.io/twoday/christmas-elf-name-generator/), you can now generate your own custom elf name just in time for Christmas!
+- [@twoday/env-public-config-and-messages-scripts](/packages/env-public-config-and-messages-scripts) – Build environment specific messages and `.env.json` files
 - [@twoday/formatjs-scripts](/packages/formatjs-scripts) – Extract and compile messages, scan `node_modules` for messages
 - [@twoday/generator-twoday](/packages/generator-twoday) – [Yeoman](https://yeoman.io) npm package generator for this repository
 - [@twoday/react-openapi-client-generator](/packages/react-openapi-client-generator) – Generate typed hooks and methods for React app from OpenAPI schema
@@ -28,6 +29,7 @@ Contributions are welcome!
 
 ### Helpers & Utilities
 
+- [@twoday/env-public-config-and-messages](/packages/env-public-config-and-messages) – Auxiliary package for [@twoday/env-public-config-and-messages-scripts](/packages/env-public-config-and-messages-scripts)
 - [@twoday/msw-openapi-backend-integration](/packages/msw-openapi-backend-integration) – Helper to integrate [Mock Service Worker](https://mswjs.io/) with [OpenAPI Backend](https://github.com/anttiviljami/openapi-backend)
 - [@twoday/react-app-locale-utils](/packages/react-app-locale-utils) – Locale state, display names, date-fns, MUI and other locale utilities
 - [@twoday/react-app-super-template](/packages/react-app-super-template) – `AppProvider` for super-template

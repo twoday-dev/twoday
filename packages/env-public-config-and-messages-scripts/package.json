@@ -1,8 +1,8 @@
 {
-  "name": "@twoday/formatjs-scripts",
-  "version": "1.0.0",
-  "description": "Extract and compile messages, scan `node_modules` for messages.",
-  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/formatjs-scripts",
+  "name": "@twoday/env-public-config-and-messages-scripts",
+  "version": "0.1.0",
+  "description": "Build environment specific messages and `.env.json` files.",
+  "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/env-public-config-and-messages-scripts",
   "repository": {
     "type": "git",
     "url": "https://github.com/twoday-dev/twoday.git"
@@ -13,12 +13,6 @@
     "email": "arno.saine@twoday.com"
   },
   "type": "module",
-  "exports": {
-    ".": "./lib/index.js",
-    "./lib": "./lib/index.js",
-    "./lib/*": "./lib/*",
-    "./*": "./lib/*.js"
-  },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "bin": "./scripts/main.js",
@@ -33,17 +27,18 @@
   },
   "dependencies": {
     "@formatjs/cli-lib": "^5.1.12",
-    "@twoday/react-app-locale-utils": "^1.0.0",
-    "@twoday/react-intl-bundled-messages": "^1.0.0",
-    "babel-plugin-formatjs": "^10.3.35",
+    "@twoday/env-public-config-and-messages": "0.1.0",
+    "@twoday/formatjs-scripts": "^1.0.0",
+    "@twoday/react-app-locale-utils": "^1.1.2",
     "chalk": "^5.2.0",
-    "fast-glob": "^3.2.7",
-    "fs-extra": "^10.0.0",
-    "read-pkg-up": "^9.1.0",
+    "fs-extra": "^11.1.0",
+    "lodash-es": "^4.17.21",
+    "recursive-readdir": "^2.2.3",
     "tiny-invariant": "^1.3.1"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.6.4",
+    "@types/create-hash": "^1.2.2",
+    "@types/recursive-readdir": "^2.2.1",
     "typescript": "^4.4.3"
   },
   "peerDependencies": {

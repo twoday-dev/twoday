@@ -7,3 +7,5 @@ declare module "@twoday/vite-plugin-react-intl-bundled-messages/dynamic-import-m
   const messagesDynamicImports: T;
   export default messagesDynamicImports;
 }
+
+declare module "use-axios";
