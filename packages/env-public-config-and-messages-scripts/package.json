@@ -1,6 +1,6 @@
 {
   "name": "@twoday/env-public-config-and-messages-scripts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Build environment specific messages and `.env.json` files.",
   "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/env-public-config-and-messages-scripts",
   "repository": {
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@formatjs/cli-lib": "^5.1.12",
-    "@twoday/env-public-config-and-messages": "0.1.0",
+    "@twoday/env-public-config-and-messages": "0.1.1",
     "@twoday/formatjs-scripts": "^1.0.0",
     "@twoday/react-app-locale-utils": "^1.1.2",
     "chalk": "^5.2.0",

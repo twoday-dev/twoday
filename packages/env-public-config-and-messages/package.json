@@ -1,6 +1,6 @@
 {
   "name": "@twoday/env-public-config-and-messages",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Auxiliary package for `@twoday/env-public-config-and-messages-scripts`.",
   "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/env-public-config-and-messages",
   "repository": {
