@@ -1,6 +1,6 @@
 {
   "name": "@twoday/babel-preset-formatjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "babel-plugin-formatjs with `preserveWhitespace` set `true`, and `removeDefaultMessage` set `true` in production.",
   "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/babel-preset-formatjs",
   "repository": {
