@@ -10,7 +10,7 @@ Contributions are welcome!
 
 ### Plugins & Presets
 
-- [@twoday/babel-preset-formatjs](/packages/babel-preset-formatjs) – [babel-plugin-formatjs](https://formatjs.io/docs/tooling/babel-plugin/) with `removeDefaultMessage` set `true` in production
+- [@twoday/babel-preset-formatjs](/packages/babel-preset-formatjs) – [babel-plugin-formatjs](https://formatjs.io/docs/tooling/babel-plugin/) with `preserveWhitespace` set `true`, and `removeDefaultMessage` set `true` in production
 - [@twoday/craco-plugin-super-template](/packages/craco-plugin-super-template) – [CRACO](https://github.com/gsoft-inc/craco) plugin for [@twoday/cra-template-craco-super-template](/packages/cra-template-craco-super-template)
 - [@twoday/vite-plugin-super-template](/packages/vite-plugin-super-template) – [Vite](https://vitejs.dev/) plugin for super-template
 

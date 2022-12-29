@@ -1,3 +1,11 @@
 module.exports = (api) => ({
-  plugins: [["formatjs", { removeDefaultMessage: api.env("production") }]],
+  plugins: [
+    [
+      "formatjs",
+      {
+        preserveWhitespace: true,
+        removeDefaultMessage: api.env("production"),
+      },
+    ],
+  ],
 });
