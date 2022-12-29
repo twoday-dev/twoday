@@ -1,5 +1,11 @@
 # @twoday/formatjs-scripts
 
+## 1.1.1
+
+### Patch Changes
+
+- bc900fa: Enable multiline translations – preserve whitespace in extracted messages
+
 ## 1.1.0
 
 ### Minor Changes
