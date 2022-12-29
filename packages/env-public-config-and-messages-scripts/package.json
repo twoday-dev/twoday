@@ -31,6 +31,7 @@
     "@twoday/formatjs-scripts": "^1.0.0",
     "@twoday/react-app-locale-utils": "^1.1.2",
     "chalk": "^5.2.0",
+    "favicons": "^7.0.2",
     "fs-extra": "^11.1.0",
     "lodash-es": "^4.17.21",
     "recursive-readdir": "^2.2.3",

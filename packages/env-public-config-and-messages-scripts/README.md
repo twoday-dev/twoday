@@ -37,32 +37,34 @@ Build environment specific messages and `.env.json` files.
        /.env.json
        /en-US.json
        /en.json
+       /favicon.png
        /fi-FI.json
      /test.example.com
        /.env.json
        /en.json
+       /favicon.png
        /fi-FI.json
    ```
 
 5. Load correct `.env.json` for the environment
 
-```js
-// main.js
+   ```js
+   // main.js
 
-import { getFilePath } from "@twoday/env-public-config-and-messages";
-import envManifest from "./.env-manifest.json";
+   import { getFilePath } from "@twoday/env-public-config-and-messages";
+   import envManifest from "./.env-manifest.json";
 
-// ...
+   // ...
 
-const envPath = getFilePath(envManifest, [({ type }) => type === "env"]);
+   const envPath = getFilePath(envManifest, [({ type }) => type === "env"]);
 
-if (envPath) {
-  await loadRuntimeConfig(`${ENV.BASENAME ?? ""}/${envPath}`);
-}
+   if (envPath) {
+     await loadRuntimeConfig(`${ENV.BASENAME ?? ""}/${envPath}`);
+   }
 
-// console.log(ENV);
+   // console.log(ENV);
 
-// ...
-```
+   // ...
+   ```
 
 6. Use `<IntlProvider>` from [`@twoday/react-intl-bundled-messages`](/packages/react-intl-bundled-messages#messages-from-envmanifest)

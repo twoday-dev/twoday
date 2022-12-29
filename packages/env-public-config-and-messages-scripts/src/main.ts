@@ -7,6 +7,8 @@ import { aggregate, extract } from "@twoday/formatjs-scripts";
 import { pseudoLocales } from "@twoday/formatjs-scripts/lib/compile.js";
 import defaultLocale from "@twoday/react-app-locale-utils/lib/defaultLocale.js";
 import chalk from "chalk";
+import type { FaviconResponse } from "favicons";
+import { favicons } from "favicons";
 import fs from "fs-extra";
 import { groupBy, merge } from "lodash-es";
 import { createHash } from "node:crypto";
@@ -45,9 +47,11 @@ const baseLocales = (locale: string) =>
     );
 const baseDefaultLocales = baseLocales(defaultLocale);
 const pathPartsLength = source.split(sep).length;
-const typesOrder = ["env", "messages"] as const;
+const typesOrder = ["env", "messages", "favicon"] as const;
 const fileColor = chalk.blueBright;
 const domainColor = chalk.greenBright;
+const ENV_FILE = ".env";
+const FAVICON_FILE = "favicon";
 
 await access(source);
 await extract(extractPath, defaultLocale);
@@ -75,13 +79,39 @@ await Promise.all(
 
 const toEnv = async (file: string) => {
   const filename = basename(file);
+  const filenameParts = filename.split(".");
+  const filenameWithoutExtension =
+    filenameParts.length === 1
+      ? filename
+      : filenameParts.slice(0, -1).join(".");
+  const type =
+    {
+      [ENV_FILE]: "env",
+      [FAVICON_FILE]: "favicon",
+    }[filenameWithoutExtension] ?? "messages";
+
+  const dataTypes = {
+    env: () => fs.readJson(file),
+    favicon: async () =>
+      favicons(await fs.readFile(file), {
+        icons: {
+          android: false,
+          appleIcon: false,
+          appleStartup: false,
+          favicons: true,
+          windows: false,
+          yandex: false,
+        },
+      }),
+    messages: () => fs.readJson(file),
+  };
 
   return {
     file,
     filename,
-    filenameWithoutExtension: basename(file, ".json"),
-    data: await fs.readJson(file),
-    type: filename === ".env.json" ? "env" : "messages",
+    filenameWithoutExtension,
+    data: await dataTypes[type as keyof typeof dataTypes](),
+    type,
   } as Env;
 };
 
@@ -106,7 +136,7 @@ const envs = [
         await recursiveReaddir(source, [
           (file) => {
             const filename = basename(file);
-            return filename.startsWith(".") && filename !== ".env.json";
+            return filename.startsWith(".") && !filename.startsWith(ENV_FILE);
           },
         ])
       ).map(toEnv)
@@ -202,7 +232,7 @@ const extendedEnvs = await Promise.all(
 
     return {
       ...env,
-      data: types[env.type as keyof typeof types](),
+      data: types[env.type as keyof typeof types]?.() ?? env.data,
     };
   })
 );
@@ -216,7 +246,16 @@ await Promise.all(
       const filePath = join(path, filename);
 
       await fs.ensureDir(path);
-      await fs.writeJson(filePath, data);
+      if (["env", "messages"].includes(type)) {
+        await fs.writeJson(filePath, data);
+      }
+      if (type === "favicon") {
+        await Promise.all(
+          (data as FaviconResponse).images.map((image) =>
+            fs.writeFile(join(path, image.name), image.contents)
+          )
+        );
+      }
 
       if (type === "messages") {
         // Compile final file in place
@@ -240,11 +279,24 @@ await fs.writeJson(
   Object.fromEntries(
     envsByDomain.map(([domain, envsByDomain]) => [
       getHashDigest(createHash, domain),
-      envsByDomain.map(({ type, filename, filenameWithoutExtension }) => ({
-        type,
-        filename,
-        locale: type === "messages" ? filenameWithoutExtension : undefined,
-      })),
+      envsByDomain.map(
+        ({ data, type, filename, filenameWithoutExtension }) =>
+          ({
+            env: () => ({
+              type,
+              filename,
+            }),
+            favicon: () => ({
+              type,
+              html: (data as FaviconResponse).html,
+            }),
+            messages: () => ({
+              type,
+              filename,
+              locale: filenameWithoutExtension,
+            }),
+          }[type]() as Env)
+      ),
     ])
   ),
   {

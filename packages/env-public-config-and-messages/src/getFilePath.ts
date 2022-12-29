@@ -1,19 +1,4 @@
-import createHash from "create-hash";
-import getHashDigest from "./getHashDigest.js";
-
-export type Manifest = Record<string, ManifestEntry[]>;
-
-export type ManifestEntry = {
-  filename: string;
-} & (
-  | {
-      type: "env";
-    }
-  | {
-      type: "messages";
-      locale: "string";
-    }
-);
+import getManifestEntry, { FileManifestEntry } from "./getManifestEntry";
 
 export const publicPath = ".env";
 
@@ -24,7 +9,7 @@ const hostnameEnv = hostnameSafe.endsWith(localhostSuffix)
   ? location.hostname.slice(0, -localhostSuffix.length)
   : location.hostname;
 
-const domains = [
+export const domains = [
   ...hostnameEnv
     .split(".")
     .map((_part, index, parts) => parts.slice(index).join(".")),
@@ -32,27 +17,15 @@ const domains = [
 ];
 
 export default function getFilePath(
-  manifest: Manifest,
-  tests: ((entry: ManifestEntry) => boolean)[]
+  ...args: Parameters<typeof getManifestEntry>
 ) {
-  let envPath: string | undefined;
+  const manifestEntry = getManifestEntry(...args);
 
-  domains.find((domain) => {
-    const env =
-      manifest[getHashDigest(createHash, domain) as keyof typeof manifest];
-    return tests.find((test) =>
-      env?.find((entry) => {
-        if (test(entry)) {
-          envPath = [publicPath, domain !== "*" && domain, entry.filename]
-            .filter(Boolean)
-            .join("/");
+  if (manifestEntry) {
+    return `${manifestEntry.path}/${
+      (manifestEntry.entry as FileManifestEntry).filename
+    }`;
+  }
 
-          return true;
-        }
-        return false;
-      })
-    );
-  });
-
-  return envPath;
+  return;
 }
