@@ -15,6 +15,7 @@ export default async function extract(target: string, locale: string) {
     await fg([`${appDirectory}/**/*.{j,t}s{,x}`, `!**/*.d.ts`]),
     {
       idInterpolationPattern: DEFAULT_ID_INTERPOLATION_PATTERN,
+      preserveWhitespace: true,
     }
   );
 
