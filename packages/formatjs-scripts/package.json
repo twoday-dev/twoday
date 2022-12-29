@@ -1,6 +1,6 @@
 {
   "name": "@twoday/formatjs-scripts",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Extract and compile messages, scan `node_modules` for messages.",
   "homepage": "https://github.com/twoday-dev/twoday/tree/main/packages/formatjs-scripts",
   "repository": {
